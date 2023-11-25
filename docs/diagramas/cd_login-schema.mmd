@@ -53,12 +53,8 @@ classDiagram
         - descricao: String
     }
 
-    Pessoa "1" *-- "1" Endereco : mora em um
-
+    Pessoa "1" *-- "1" Endereco: mora em um
     Pessoa "1..*" -- "1" Escolaridade
-
     Escolaridade "1" -- "1..*" NivelEscolaridade
-
     Pessoa "1..*" -- "1..*" OrgaoInstituicaoEmpresa
-
-    Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
+    Endereco "1" *-- "1..*" TipoLogradouro: pode ser um/a
