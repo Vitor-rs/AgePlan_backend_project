@@ -1,0 +1,64 @@
+---
+title: AgePlan Login Schema class diagram
+---
+classDiagram
+    class Pessoa {
+        - nomeCompleto: String
+        - cpf: String
+        - rg: String
+        - genero: String
+        - dataNascimento: LocalDate
+        - endereco: Endereco
+        - telefoneCelular: String
+        - telefoneFixo: String
+        - estrangeiro: Boolean
+    }
+
+    class Endereco {
+        - id: Long
+        - nome: String
+        - tipoLogradouro: TipoLogradouro
+        - numero: String
+        - complemento: String
+        - bairro: String
+        - cidade: String
+        - estado: String
+        - cep: String
+    }
+
+    class TipoLogradouro {
+        <<enumeration>>
+        RUA
+        AVENIDA
+        TRAVESSA
+        ALAMEDA
+        ESTRADA
+        RODOVIA
+        OUTROS
+    }
+
+    class OrgaoInstituicaoEmpresa {
+        - id: Long
+        - nome: String
+        - sigla: String
+    }
+
+    class Escolaridade {
+        - id: Long
+        - descricao: String
+    }
+
+    class NivelEscolaridade {
+        - id: Long
+        - descricao: String
+    }
+
+    Pessoa "1" *-- "1" Endereco : mora em um
+
+    Pessoa "1..*" -- "1" Escolaridade
+
+    Escolaridade "1" -- "1..*" NivelEscolaridade
+
+    Pessoa "1..*" -- "1..*" OrgaoInstituicaoEmpresa
+
+    Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
