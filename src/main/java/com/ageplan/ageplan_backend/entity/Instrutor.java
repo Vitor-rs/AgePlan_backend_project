@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
  * a role/função ROLE_INSTRUTOR. Ela não é abstrata para que seja mapeada
  * no banco de dados.
  */
-
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

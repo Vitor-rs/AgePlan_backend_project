@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 /**
  * DTO para {@link Pessoa}
  */
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -47,6 +46,11 @@ public abstract class PessoaDto extends UsuarioDto {
 
     /*----------------------------------------------------------------------*/
 
+    /**
+     * Instantiates a new Pessoa dto.
+     *
+     * @param pessoa the pessoa
+     */
     public PessoaDto(Pessoa pessoa) {
         super(pessoa);
         this.nomeCompleto = pessoa.getNomeCompleto();
@@ -61,34 +65,74 @@ public abstract class PessoaDto extends UsuarioDto {
 
     // Setters
 
+    /**
+     * Sets nome completo.
+     *
+     * @param nomeCompleto the nome completo
+     */
     public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
     }
 
+    /**
+     * Sets cpf.
+     *
+     * @param cpf the cpf
+     */
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
+    /**
+     * Sets rg.
+     *
+     * @param rg the rg
+     */
     public void setRg(String rg) {
         this.rg = rg;
     }
 
+    /**
+     * Sets telefone.
+     *
+     * @param telefone the telefone
+     */
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
+    /**
+     * Sets endereco.
+     *
+     * @param endereco the endereco
+     */
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
+    /**
+     * Sets cidade.
+     *
+     * @param cidade the cidade
+     */
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
 
+    /**
+     * Sets estado.
+     *
+     * @param estado the estado
+     */
     public void setEstado(String estado) {
         this.estado = estado;
     }
 
+    /**
+     * Sets cep.
+     *
+     * @param cep the cep
+     */
     public void setCep(String cep) {
         this.cep = cep;
     }

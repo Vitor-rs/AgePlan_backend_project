@@ -11,7 +11,6 @@ import java.io.Serializable;
 /**
  * DTO para {@link Roles}
  */
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -23,6 +22,11 @@ public class RolesDto implements Serializable {
 
     private String nomeRole;
 
+    /**
+     * Instantiates a new Roles dto.
+     *
+     * @param roles the roles
+     */
     /*--------------------------------------------------*/
     public RolesDto(Roles roles) {
         this.id = roles.getId();
@@ -33,10 +37,20 @@ public class RolesDto implements Serializable {
     /*--------------------------------------------------*/
     // Setters
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * Sets nome role.
+     *
+     * @param nomeRole the nome role
+     */
     public void setNomeRole(String nomeRole) {
         this.nomeRole = nomeRole;
     }

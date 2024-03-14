@@ -22,6 +22,9 @@ import lombok.NoArgsConstructor;
 import java.io.Serial;
 import java.io.Serializable;
 
+/**
+ * The type Roles.
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

@@ -17,6 +17,11 @@ public class InstrutorDto extends PessoaDto {
 
     // Construtor usando a classe Instrutor como parâmetro
 
+    /**
+     * Instantiates a new Instrutor dto.
+     *
+     * @param instrutor the instrutor
+     */
     public InstrutorDto(Instrutor instrutor) {
         super(instrutor);
         this.especialidade = instrutor.getEspecialidade();
@@ -24,6 +29,11 @@ public class InstrutorDto extends PessoaDto {
 
     // Setter
 
+    /**
+     * Sets especialidade.
+     *
+     * @param especialidade the especialidade
+     */
     public void setEspecialidade(String especialidade) {
         this.especialidade = especialidade;
     }

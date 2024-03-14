@@ -10,14 +10,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
 /**
  * A classe Pessoa representa uma pessoa física que pode ser um
  * usuário do sistema ou um cliente. Ela será abstrata para que
  * não seja mapeada no banco de dados, mas sim suas subclasses
  * como as classes Instrutor e Aluno.
  */
-
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

@@ -41,6 +41,11 @@ public abstract class UsuarioDto implements Serializable {
 
     private Set<RolesDto> roles;
 
+    /**
+     * Instantiates a new Usuario dto.
+     *
+     * @param usuario the usuario
+     */
     public UsuarioDto(Usuario usuario) {
         this.id = usuario.getId();
         this.nomeUsuario = usuario.getNomeUsuario();
@@ -50,22 +55,47 @@ public abstract class UsuarioDto implements Serializable {
 
     // Setters
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * Sets nome usuario.
+     *
+     * @param nomeUsuario the nome usuario
+     */
     public void setNomeUsuario(String nomeUsuario) {
         this.nomeUsuario = nomeUsuario;
     }
 
+    /**
+     * Sets senha.
+     *
+     * @param senha the senha
+     */
     public void setSenha(String senha) {
         this.senha = senha;
     }
 
+    /**
+     * Sets email.
+     *
+     * @param email the email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     * Sets roles.
+     *
+     * @param roles the roles
+     */
     public void setRoles(Set<RolesDto> roles) {
         this.roles = roles;
     }

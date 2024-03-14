@@ -24,7 +24,6 @@ import java.util.Set;
  * de segurança, onde será usado o Spring Security para autenticação e
  * autorização de usuários.
  */
-
 @MappedSuperclass
 @AllArgsConstructor
 @NoArgsConstructor
@@ -106,14 +105,30 @@ public abstract class Usuario implements UserDetails, Serializable {
     /*----------------------------------------------------------------*/
     // Métodos da classe Usuario
 
+    /**
+     * Add role.
+     *
+     * @param role the role
+     */
     public void addRole(Roles role) {
         this.roles.add(role);
     }
 
+    /**
+     * Remove role.
+     *
+     * @param role the role
+     */
     public void removeRole(Roles role) {
         this.roles.remove(role);
     }
 
+    /**
+     * Has role boolean.
+     *
+     * @param role the role
+     * @return the boolean
+     */
     public boolean hasRole(Roles role) {
         return this.roles.contains(role);
     }
@@ -122,14 +137,29 @@ public abstract class Usuario implements UserDetails, Serializable {
     /*----------------------------------------------------------------*/
     // Setters
 
+    /**
+     * Sets nome usuario.
+     *
+     * @param nomeUsuario the nome usuario
+     */
     public void setNomeUsuario(String nomeUsuario) {
         this.nomeUsuario = nomeUsuario;
     }
 
+    /**
+     * Sets email.
+     *
+     * @param email the email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     * Sets roles.
+     *
+     * @param roles the roles
+     */
     public void setRoles(Set<Roles> roles) {
         this.roles = roles;
     }
