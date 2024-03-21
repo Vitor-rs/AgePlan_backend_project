@@ -1,6 +1,6 @@
-package com.ageplan.ageplan_backend.repository;
+package com.ageplan.ageplan_backend.Roles;
 
-import com.ageplan.ageplan_backend.entity.Roles;
+import com.ageplan.ageplan_backend.Roles.Roles;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

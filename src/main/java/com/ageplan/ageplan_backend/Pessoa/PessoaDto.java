@@ -1,6 +1,6 @@
-package com.ageplan.ageplan_backend.dto;
+package com.ageplan.ageplan_backend.Pessoa;
 
-import com.ageplan.ageplan_backend.entity.Pessoa;
+import com.ageplan.ageplan_backend.Usuario.UsuarioDto;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;

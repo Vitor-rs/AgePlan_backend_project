@@ -1,6 +1,5 @@
-package com.ageplan.ageplan_backend.dto;
+package com.ageplan.ageplan_backend.Usuario;
 
-import com.ageplan.ageplan_backend.entity.Usuario;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -10,7 +9,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Set;
 
 /**
  * DTO para {@link Usuario}
@@ -39,7 +37,13 @@ public abstract class UsuarioDto implements Serializable {
     @NotBlank
     private String email;
 
-    private Set<RolesDto> roles;
+    @NotNull
+    @NotEmpty
+    @NotBlank
+    private String numeroTelefoneCelular;
+
+
+//    private Set<RolesDto> roles;
 
     /**
      * Instantiates a new Usuario dto.
@@ -58,7 +62,7 @@ public abstract class UsuarioDto implements Serializable {
     /**
      * Sets id.
      *
-     * @param id the id
+     * @param id o id
      */
     public void setId(Long id) {
         this.id = id;
@@ -96,8 +100,8 @@ public abstract class UsuarioDto implements Serializable {
      *
      * @param roles the roles
      */
-    public void setRoles(Set<RolesDto> roles) {
-        this.roles = roles;
-    }
+//    public void setRoles(Set<RolesDto> roles) {
+//        this.roles = roles;
+//    }
 
 }

@@ -1,5 +1,6 @@
-package com.ageplan.ageplan_backend.entity;
+package com.ageplan.ageplan_backend.Pessoa;
 
+import com.ageplan.ageplan_backend.Usuario.Usuario;
 import jakarta.persistence.Column;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;

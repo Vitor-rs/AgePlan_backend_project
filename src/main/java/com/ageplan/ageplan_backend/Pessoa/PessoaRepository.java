@@ -1,5 +1,6 @@
-package com.ageplan.ageplan_backend.repository;
+package com.ageplan.ageplan_backend.Pessoa;
 
+import com.ageplan.ageplan_backend.Usuario.UsuarioRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
 /**

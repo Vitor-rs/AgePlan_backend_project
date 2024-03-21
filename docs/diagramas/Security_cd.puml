@@ -1,0 +1,100 @@
+@startuml
+
+abstract class Usuario <<@MappedSuperClass>> {
+    - <u>SERIAL_VERSION_UUID</u>: Long = 1L
+    ..
+    - id: Long
+    ..
+    - nomeUsuario: String
+    - senha: String
+    - email: String
+    ..
+    - Set<Roles> roles = new HashSet<>()
+    ..
+    + Collection<? extends GrantedAuthority> getAuthorities()
+    + String getPassword()
+    + String getUsername()
+    + boolean isAccountNonExpired()
+    + boolean isAccountNonLocked()
+    + boolean isCredentialsNonExpired()
+    + boolean isEnabled()
+    ..
+    + void addRole(Roles role)
+    + void removeRole(Roles role)
+    + void hasRole(Roles role)
+    ..
+    + void setNomeUsuario(String nomeUsuario)
+    + void setEmail(String email)
+    + void setRoles(Set<Roles> roles)
+    ..
+    + boolean equals(Object o)
+    + int hashCode()
+    + String toString()
+}
+
+abstract class Pessoa extends Usuario {
+    - <u>SERIAL_VERSION_UUID</u>: Long = 1L
+    ..
+    - nomeCompleto: String
+    - cpf: String
+    - rg: String
+    - genero: char
+    - dataNascimento: LocalDate
+    - telefoneCelular: String
+    - telefoneFixo: String
+    - endereco: Endereco
+    - estrangeiro: boolean
+    ..
+    + String getNomeCompleto()
+    + String getCpf()
+    + String getRg()
+    + char getGenero()
+    + LocalDate getDataNascimento()
+    + String getTelefoneCelular()
+    + String getTelefoneFixo()
+    + Endereco getEndereco()
+    + boolean isEstrangeiro()
+    ..
+    + void setNomeCompleto(String nomeCompleto)
+    + void setCpf(String cpf)
+    + void setRg(String rg)
+    + void setGenero(char genero)
+    + void setDataNascimento(LocalDate dataNascimento)
+    + void setTelefoneCelular(String telefoneCelular)
+    + void setTelefoneFixo(String telefoneFixo)
+    + void setEndereco(Endereco endereco)
+    + void setEstrangeiro(boolean estrangeiro)
+    ..
+    + boolean equals(Object o)
+    + int hashCode()
+    + String toString()
+}
+
+class Roles {
+    - <u>SERIAL_VERSION_UUID</u>: Long = 1L
+    ..
+    - id: Long
+    - autoridade: String
+    ..
+    + String getAutoridade()
+    ..
+    + boolean equals(Object o)
+    + int hashCode()
+    + String toString()
+}
+
+class Administrador extends Pessoa {
+    - <u>SERIAL_VERSION_UUID</u>: Long = 1L
+    ..
+    + addRole(Roles role)
+    + removeRole(Roles role)
+    + hasRole(Roles role)
+    ..
+    + boolean equals(Object o)
+    + int hashCode()
+    + String toString()
+}
+
+
+
+@enduml

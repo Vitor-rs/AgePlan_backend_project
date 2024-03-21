@@ -1,5 +1,6 @@
 package com.ageplan.ageplan_backend.entity;
 
+import com.ageplan.ageplan_backend.Pessoa.Pessoa;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,9 +34,32 @@ public class Administrador extends Pessoa {
        - Para evitar repetição de código, a classe Instrutor tem métodos para gerenciar Alunos, logo
          a classe Administrador pode herdar essas funcionalidades.
 
-       -
+    */
+
+    /*
+     Diagram em PantUml para ilustrar a relação entre as classes Administrador, Instrutor e Aluno
+
+    @startuml
+    class Administrador {
+        Instrutor instrutor
+        Aluno aluno
+    }
+    class Instrutor {
+        Aluno aluno
+    }
+    class Aluno {
+    }
+
+    Administrador "1" -- "1..*" Instrutor
+    Administrador "1" -- "1..*" Aluno
+    Instrutor "1" -- "1..*" Aluno
+    @enduml
 
 
     */
+
+
+
+
 
 }

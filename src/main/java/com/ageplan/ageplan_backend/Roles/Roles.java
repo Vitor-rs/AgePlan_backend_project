@@ -1,4 +1,4 @@
-package com.ageplan.ageplan_backend.entity;
+package com.ageplan.ageplan_backend.Roles;
 
 /**
  * A classe Roles representa os papéis que um usuário pode ter no sistema.
@@ -37,6 +37,6 @@ public class Roles implements Serializable {
     private Long id;
     /*----------------------------------------------------------------*/
 
-    private String nomeRole;
+    private String roleName;
 
 }
