@@ -23,7 +23,7 @@ abstract class Usuario <<@MappedSuperClass>> {
     + void removeRole(Roles role)
     + void hasRole(Roles role)
     ..
-    + void setNomeUsuario(String nomeUsuario)
+    + void setUserName(String nomeUsuario)
     + void setEmail(String email)
     + void setRoles(Set<Roles> roles)
     ..

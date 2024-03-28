@@ -1,6 +1,5 @@
-package com.ageplan.ageplan_backend.Usuario;
+package com.ageplan.ageplan_backend_project.Usuario;
 
-import com.ageplan.ageplan_backend.Usuario.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 

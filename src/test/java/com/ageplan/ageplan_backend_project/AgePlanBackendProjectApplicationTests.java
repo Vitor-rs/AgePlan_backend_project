@@ -1,4 +1,4 @@
-package com.ageplan.ageplan_backend;
+package com.ageplan.ageplan_backend_project;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.ageplan.ageplan_backend.Roles;
+package com.ageplan.ageplan_backend_project.Roles;
 
 /**
  * A classe Roles representa os papéis que um usuário pode ter no sistema.

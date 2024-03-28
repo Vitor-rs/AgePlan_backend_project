@@ -1,10 +1,11 @@
-package com.ageplan.ageplan_backend.Endereco;
+package com.ageplan.ageplan_backend_project.Endereco;
 
 import java.io.Serial;
 import java.io.Serializable;
 
 public class Endereco implements Serializable {
-    @Serial private static final long serialVersionUID = 1L;
+    @Serial
+    private static final long serialVersionUID = 1L;
     //------------------------------------------------------
     private Long id;
     //------------------------------------------------------
