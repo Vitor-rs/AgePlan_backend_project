@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -33,10 +34,20 @@ public abstract class Usuario implements UserDetails, Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     /*----------------------------------------------------------------*/
 
+    /**
+     * -- SETTER --
+     *  Sets nome usuario.
+     *
+     */
+    @Setter
+    @NotNull
+    @NotBlank
+    @NotEmpty
+    @Column(nullable = false)
     private String nomeUsuario;
 
     @NotNull
@@ -51,13 +62,19 @@ public abstract class Usuario implements UserDetails, Serializable {
     @Column(unique = true, nullable = false)
     private String email;
 
+    @NotNull
+    @NotBlank
+    @NotEmpty
+    @Column(unique = true, nullable = false)
+    private String numeroCelular;
+
     // Atritubo de relação com a classe Role onde muitos usuários podem ter uma ou mais roles
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "usuario_roles",
-            joinColumns = @JoinColumn(name = "usuario_id"),
-            inverseJoinColumns = @JoinColumn(name = "roles_id"),
+            joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "roles_id", referencedColumnName = "id"),
             uniqueConstraints = @UniqueConstraint(columnNames = {"usuario_id", "roles_id"}),
             foreignKey = @ForeignKey(name = "fk_usuario_id"),
             inverseForeignKey = @ForeignKey(name = "fk_roles_id")
@@ -137,15 +154,6 @@ public abstract class Usuario implements UserDetails, Serializable {
 
     /*----------------------------------------------------------------*/
     // Setters
-
-    /**
-     * Sets nome usuario.
-     *
-     * @param nomeUsuario the nome usuario
-     */
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
-    }
 
     /**
      * Sets email.

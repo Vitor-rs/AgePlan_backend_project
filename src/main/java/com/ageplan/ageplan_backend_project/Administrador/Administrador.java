@@ -5,11 +5,11 @@ import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Getter
 public class Administrador extends Pessoa {
 
@@ -36,27 +36,14 @@ public class Administrador extends Pessoa {
 
     */
 
-    /*
-     Diagram em PantUml para ilustrar a relação entre as classes Administrador, Instrutor e Aluno
+    // Métodos para gerenciar Instrutores e Alunos
 
-    @startuml
-    class Administrador {
-        Instrutor instrutor
-        Aluno aluno
-    }
-    class Instrutor {
-        Aluno aluno
-    }
-    class Aluno {
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public void listarInstrutores() {
+        // Listar Instrutores
     }
 
-    Administrador "1" -- "1..*" Instrutor
-    Administrador "1" -- "1..*" Aluno
-    Instrutor "1" -- "1..*" Aluno
-    @enduml
 
-
-    */
 
 
 }

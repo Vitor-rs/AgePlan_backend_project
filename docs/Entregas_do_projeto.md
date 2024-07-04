@@ -3,6 +3,19 @@
 ## Etapa 1
 
 - Lista de problemas a serem solucionados;
+
+    1. Profissionais independentes e freelancers de diversas áreas enfrentam dificuldades para criar, administrar e
+       ministrar seus próprios cursos, devido à falta de ferramentas acessíveis e recursos adequados para gerenciar suas
+       atividades educacionais sem dependencia planilhas, sistemas de terceiros ou de grandes empresas e também
+       eficientizar seu gerenciamento de recursos e finanças.
+
+  1.1. Dificuldade em criar e administrar cursos de forma personalizada e simplificada.
+  1.2. Dificuldade em gerenciar matrículas, frequências, pagamentos e progresso dos alunos.
+  1.3. Dificuldade em oferecer uma alternativa mais acessível e enxuta em comparação aos sistemas existentes.
+  1.3. Falta de ferramentas acessíveis e recursos adequados para gerenciar suas atividades educacionais de forma
+  eficiente.
+
+
 - Descrição detalhada do problema a ser solucionado;
 - Lista de requisitos funcionais e não funcionais a serem desenvolvidos na solução do problema;
 - Diagramas de casos de uso simplificado e expandido;

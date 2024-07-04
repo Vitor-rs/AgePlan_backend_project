@@ -24,6 +24,7 @@ import java.io.Serializable;
 
 /**
  * The type Roles.
+ *
  */
 @Entity
 @AllArgsConstructor
@@ -37,6 +38,9 @@ public class Roles implements Serializable {
     private Long id;
     /*----------------------------------------------------------------*/
 
-    private String roleName;
+    private String nome;
+    private String descricao;
+
+
 
 }
