@@ -142,9 +142,69 @@ A modelagem do sistema de controle e gerenciamento de cursos livres para freelan
 ## 3.1 Diagrama de casos de uso
 
 O diagrama de casos de uso do sistema  de controle e gerenciamento de cursos livres para freelancers representa as interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
+```plantuml
+
+'Esquema de login e autenticação da aplicação
+'baseado nas roles relacionadas ao usuário
+
+abstract class Usuario <<@MappedSuperClass>> {
+    - id: Long
+    - nomeUsuario: String
+    - senha: String
+    - email: String
+    - roles: Set<Role>
+}
+
+class Role {
+    - id: Long
+    - nome: String
+}
+
+abstract class Pessoa {
+    - nomeCompleto: String
+    - cpf: String
+    - rg: String
+    - genero: String
+    - dataNascimento: LocalDate
+    - endereco: Endereco
+    - telefoneCelular: String
+    - telefoneFixo: String
+    - estrangeiro: Boolean
+}
+
+class Instrutor {
+    - especialidade: String
+}
+
+class Aluno {
+    - matricula: String
+}
+
+Usuario "1" -- "1..*" Role
+Usuario <|-- Pessoa
+Pessoa <|-- Instrutor
+Pessoa <|-- Aluno
+
+```
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
 O diagrama de casos de uso ilustra as interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema. Os atores do sistema incluem professores, alunos e administradores, que interagem com o sistema por meio de casos de uso como cadastrar professor, cadastrar aluno, criar curso, administrar curso, matricular aluno, acompanhar progresso, avaliar curso, gerenciar pagamentos, suporte técnico, relatórios e configurações. Um ponto a ser considerado é a relação entre Professor e Administrador, pois o próprio Professor pode ser o Administrador do sistema, ou seja, ele pode ter acesso a todas as funcionalidades do sistema, inclusive as de administrador. Logo há a necessidade de extender o caso de uso de Professor para Administrador.
 
 ---
+
+# Banner de apresentação
+
+## Título do trabalho:
+
+## Nome do autor:
+
+## Texto de apresentação
+
+## Solução
+
+
+
+## Elementos do Projeto
+
+## Considerações finais
