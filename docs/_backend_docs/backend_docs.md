@@ -142,50 +142,8 @@ A modelagem do sistema de controle e gerenciamento de cursos livres para freelan
 ## 3.1 Diagrama de casos de uso
 
 O diagrama de casos de uso do sistema  de controle e gerenciamento de cursos livres para freelancers representa as interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
-```plantuml
-@startuml
-'Esquema de login e autenticação da aplicação
-'baseado nas roles relacionadas ao usuário
 
-abstract class Usuario <<@MappedSuperClass>> {
-    - id: Long
-    - nomeUsuario: String
-    - senha: String
-    - email: String
-    - roles: Set<Role>
-}
-
-class Role {
-    - id: Long
-    - nome: String
-}
-
-abstract class Pessoa {
-    - nomeCompleto: String
-    - cpf: String
-    - rg: String
-    - genero: String
-    - dataNascimento: LocalDate
-    - endereco: Endereco
-    - telefoneCelular: String
-    - telefoneFixo: String
-    - estrangeiro: Boolean
-}
-
-class Instrutor {
-    - especialidade: String
-}
-
-class Aluno {
-    - matricula: String
-}
-
-Usuario "1" -- "1..*" Role
-Usuario <|-- Pessoa
-Pessoa <|-- Instrutor
-Pessoa <|-- Aluno
-@enduml
-```
+![plan](https://github.com/Vitor-rs/AgePlan_backend_project/blob/626bb4cddcc349d984048c039cca28370deab04d/docs/_backend_docs/diagramas/cd_pessoa-schema.puml)
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
