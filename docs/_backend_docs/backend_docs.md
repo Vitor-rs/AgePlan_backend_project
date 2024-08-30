@@ -213,6 +213,8 @@ Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
 
 </div>
 
+![](Pessoa.svg)
+
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
