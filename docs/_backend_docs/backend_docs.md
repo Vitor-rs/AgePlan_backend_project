@@ -144,8 +144,7 @@ A modelagem do sistema de controle e gerenciamento de cursos livres para freelan
 O diagrama de casos de uso do sistema  de controle e gerenciamento de cursos livres para freelancers representa as interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
 
-<!--
-@startuml Pessoa
+{% plantuml %}
 
 abstract class Pessoa {
     - nomeCompleto: String
@@ -207,10 +206,7 @@ Pessoa "1..*" -- "1..*" OrgaoInstituicaoEmpresa
 
 Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
 
-@enduml
--->
-
-![](Pessoa.svg)
+{% endplantuml %}
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
