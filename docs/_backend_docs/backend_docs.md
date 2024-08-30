@@ -143,7 +143,9 @@ A modelagem do sistema de controle e gerenciamento de cursos livres para freelan
 
 O diagrama de casos de uso do sistema  de controle e gerenciamento de cursos livres para freelancers representa as interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
+<div hidden>
 ![plan](https://github.com/Vitor-rs/AgePlan_backend_project/blob/626bb4cddcc349d984048c039cca28370deab04d/docs/_backend_docs/diagramas/cd_pessoa-schema.puml)
+</div>
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
