@@ -145,7 +145,7 @@ O diagrama de casos de uso do sistema  de controle e gerenciamento de cursos liv
 
 
 ```plantuml
-@startuml Pessoa
+@startuml
 
 abstract class Pessoa {
     - nomeCompleto: String
