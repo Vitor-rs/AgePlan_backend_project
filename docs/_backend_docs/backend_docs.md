@@ -145,8 +145,6 @@ O diagrama de casos de uso do sistema  de controle e gerenciamento de cursos liv
 
 
 ```plantuml
-@startuml
-
 abstract class Pessoa {
     - nomeCompleto: String
     - cpf: String
@@ -206,8 +204,6 @@ Escolaridade "1" -- "1..*" NivelEscolaridade
 Pessoa "1..*" -- "1..*" OrgaoInstituicaoEmpresa
 
 Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
-
-@enduml
 ```
 
 
