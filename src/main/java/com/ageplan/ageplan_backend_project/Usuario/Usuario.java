@@ -40,8 +40,7 @@ public abstract class Usuario implements UserDetails, Serializable {
 
     /**
      * -- SETTER --
-     *  Sets nome usuario.
-     *
+     * Sets nome usuario.
      */
     @Setter
     @NotNull

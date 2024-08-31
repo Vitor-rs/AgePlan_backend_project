@@ -2,9 +2,7 @@ package com.ageplan.ageplan_backend_project.Administrador;
 
 import com.ageplan.ageplan_backend_project.Pessoa.Pessoa;
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 
 
@@ -42,8 +40,6 @@ public class Administrador extends Pessoa {
     public void listarInstrutores() {
         // Listar Instrutores
     }
-
-
 
 
 }

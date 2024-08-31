@@ -1,5 +1,6 @@
 package com.ageplan.ageplan_backend_project.Usuario;
 
+import com.ageplan.ageplan_backend_project.Roles.Roles;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -9,6 +10,8 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * DTO para {@link Usuario}
@@ -16,7 +19,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public abstract class UsuarioDto implements Serializable {
+public class UsuarioDto implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
@@ -40,10 +43,9 @@ public abstract class UsuarioDto implements Serializable {
     @NotNull
     @NotEmpty
     @NotBlank
-    private String numeroTelefoneCelular;
+    private String numeroCelular;
 
-
-//    private Set<RolesDto> roles;
+    private Set<String> roles;
 
     /**
      * Instantiates a new Usuario dto.
@@ -55,6 +57,10 @@ public abstract class UsuarioDto implements Serializable {
         this.nomeUsuario = usuario.getNomeUsuario();
         this.senha = usuario.getSenha();
         this.email = usuario.getEmail();
+        this.numeroCelular = usuario.getNumeroCelular();
+        this.roles = usuario.getRoles().stream()
+                .map(Roles::getNome)
+                .collect(Collectors.toSet());
     }
 
     // Setters
@@ -96,12 +102,20 @@ public abstract class UsuarioDto implements Serializable {
     }
 
     /**
+     * Sets numero celular.
+     *
+     * @param numeroCelular the numero celular
+     */
+    public void setNumeroCelular(String numeroCelular) {
+        this.numeroCelular = numeroCelular;
+    }
+
+    /**
      * Sets roles.
      *
      * @param roles the roles
      */
-//    public void setRoles(Set<RolesDto> roles) {
-//        this.roles = roles;
-//    }
-
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
+    }
 }

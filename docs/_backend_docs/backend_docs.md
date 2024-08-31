@@ -31,51 +31,93 @@
 
 ## Resumo
 
-Este trabalho apresenta o projeto de um sistema de controle e gerenciamento de cursos livres destinado a profissionais independentes e freelancers de diversas áreas. A proposta visa fornecer uma solução autônoma e completa para que esses profissionais possam criar, administrar e ministrar seus próprios cursos de forma personalizada e simplificada. O contexto para este projeto é a crescente demanda por oportunidades de ensino e aprendizado, especialmente em meio à pandemia de Covid-19, que impulsionou a busca por cursos online ministrados por profissionais autônomos.
+Este trabalho apresenta o projeto de um sistema de controle e gerenciamento de cursos livres destinado a profissionais
+independentes e freelancers de diversas áreas. A proposta visa fornecer uma solução autônoma e completa para que esses
+profissionais possam criar, administrar e ministrar seus próprios cursos de forma personalizada e simplificada. O
+contexto para este projeto é a crescente demanda por oportunidades de ensino e aprendizado, especialmente em meio à
+pandemia de Covid-19, que impulsionou a busca por cursos online ministrados por profissionais autônomos.
 
 ## Abstract
 
-This paper presents the project of a control and management system for free training courses designed for independent professionals and freelancers from various fields. The proposal aims to provide an autonomous and comprehensive solution, allowing these professionals to create, administer, and teach their own customized courses in a simplified manner. The context for this project is the increasing demand for learning opportunities, particularly in the wake of the Covid-19 pandemic, which has driven the search for online courses delivered by autonomous professionals.
+This paper presents the project of a control and management system for free training courses designed for independent
+professionals and freelancers from various fields. The proposal aims to provide an autonomous and comprehensive
+solution, allowing these professionals to create, administer, and teach their own customized courses in a simplified
+manner. The context for this project is the increasing demand for learning opportunities, particularly in the wake of
+the Covid-19 pandemic, which has driven the search for online courses delivered by autonomous professionals.
 
 # 1. Introdução
 
-O mercado de trabalho tem passado por mudanças significativas nos últimos anos, com a ascensão de novas formas de trabalho e a crescente demanda por profissionais autônomos e freelancers. Nesse contexto, a oferta de cursos livres e treinamentos online tem se tornado uma alternativa cada vez mais popular para aprimorar habilidades e competências profissionais. No entanto, muitos profissionais independentes enfrentam dificuldades para criar, administrar e ministrar seus próprios cursos, devido à falta de ferramentas e recursos adequados. Este projeto visa suprir essa demanda, oferecendo um sistema independente de controle e gerenciamento de cursos livres para freelancers, que permita a criação, administração e ministração de cursos de forma personalizada e simplificada. O sistema proposto será desenvolvido com base em tecnologias modernas e padrões de projeto, visando a segurança, escalabilidade e facilidade de uso.
+O mercado de trabalho tem passado por mudanças significativas nos últimos anos, com a ascensão de novas formas de
+trabalho e a crescente demanda por profissionais autônomos e freelancers. Nesse contexto, a oferta de cursos livres e
+treinamentos online tem se tornado uma alternativa cada vez mais popular para aprimorar habilidades e competências
+profissionais. No entanto, muitos profissionais independentes enfrentam dificuldades para criar, administrar e ministrar
+seus próprios cursos, devido à falta de ferramentas e recursos adequados. Este projeto visa suprir essa demanda,
+oferecendo um sistema independente de controle e gerenciamento de cursos livres para freelancers, que permita a criação,
+administração e ministração de cursos de forma personalizada e simplificada. O sistema proposto será desenvolvido com
+base em tecnologias modernas e padrões de projeto, visando a segurança, escalabilidade e facilidade de uso.
 
 ## 1.1 Proposta do projeto
 
-O projeto proposto visa desenvolver um sistema de controle e gerenciamento de cursos livres para Freelancers ou Profissionais Liberais. Este sistema será independente, não estando vinculado ou integrado a nenhum outro existente. Inspirou-se em sistemas como Sponte e Unified Transform.
+O projeto proposto visa desenvolver um sistema de controle e gerenciamento de cursos livres para Freelancers ou
+Profissionais Liberais. Este sistema será independente, não estando vinculado ou integrado a nenhum outro existente.
+Inspirou-se em sistemas como Sponte e Unified Transform.
 
-Os profissionais independentes poderão criar seus próprios cursos de forma simplificada, definindo detalhes específicos como ementa, duração, metodologia de ensino e recursos utilizados. Também serão responsáveis por cadastrar seus clientes. O objetivo é facilitar a administração de aulas, oferecendo uma alternativa mais acessível e enxuta em comparação aos sistemas existentes. 
+Os profissionais independentes poderão criar seus próprios cursos de forma simplificada, definindo detalhes específicos
+como ementa, duração, metodologia de ensino e recursos utilizados. Também serão responsáveis por cadastrar seus
+clientes. O objetivo é facilitar a administração de aulas, oferecendo uma alternativa mais acessível e enxuta em
+comparação aos sistemas existentes.
 
-A proposta é proporcionar aos professores independentes uma ferramenta acessível e de fácil personalização para administrar seus cursos de forma ágil e eficiente. Com o sistema, poderão gerenciar matrículas, frequências, pagamentos e acompanhar o progresso dos alunos. 
+A proposta é proporcionar aos professores independentes uma ferramenta acessível e de fácil personalização para
+administrar seus cursos de forma ágil e eficiente. Com o sistema, poderão gerenciar matrículas, frequências, pagamentos
+e acompanhar o progresso dos alunos.
 
-A interface do sistema será intuitiva, visando uma experiência amigável ao usuário, e medidas de segurança serão implementadas para proteger as informações dos envolvidos.
+A interface do sistema será intuitiva, visando uma experiência amigável ao usuário, e medidas de segurança serão
+implementadas para proteger as informações dos envolvidos.
 
-O objetivo final é atender à demanda crescente por cursos ministrados por profissionais independentes, especialmente em meio à pandemia de Covid-19, oferecendo uma solução autônoma, versátil e personalizável que contribua para a educação e formação profissional.
+O objetivo final é atender à demanda crescente por cursos ministrados por profissionais independentes, especialmente em
+meio à pandemia de Covid-19, oferecendo uma solução autônoma, versátil e personalizável que contribua para a educação e
+formação profissional.
 
 ## 1.2 Objetivos
 
-O objetivo principal deste projeto é desenvolver um sistema independente de controle e gerenciamento de cursos livres para freelancers, que permita a criação, administração e administração de cursos de forma personalizada e simplificada. Para alcançar esse objetivo, os seguintes objetivos específicos foram estabelecidos:
-- Desenvolver um sistema web responsivo e intuitivo, que permita a criação e administração de cursos de forma simplificada.id1[(Database)]
+O objetivo principal deste projeto é desenvolver um sistema independente de controle e gerenciamento de cursos livres
+para freelancers, que permita a criação, administração e administração de cursos de forma personalizada e simplificada.
+Para alcançar esse objetivo, os seguintes objetivos específicos foram estabelecidos:
 
-- Implementar um sistema de autenticação e autorização seguro, que proteja as informações dos usuários e garanta a privacidade e a integridade dos dados.
+- Desenvolver um sistema web responsivo e intuitivo, que permita a criação e administração de cursos de forma
+  simplificada.id1[(Database)]
+
+- Implementar um sistema de autenticação e autorização seguro, que proteja as informações dos usuários e garanta a
+  privacidade e a integridade dos dados.
 - Oferecer uma interface amigável e de fácil navegação, que proporcione uma experiência agradável ao usuário.
-- Disponibilizar ferramentas de acompanhamento e análise de desempenho, que permitam aos professores acompanhar o   progresso dos alunos e avaliar a eficácia dos cursos.
+- Disponibilizar ferramentas de acompanhamento e análise de desempenho, que permitam aos professores acompanhar o
+  progresso dos alunos e avaliar a eficácia dos cursos.
 - Integrar métodos de pagamento seguros e eficientes, que facilitem a cobrança e a gestão financeira dos cursos.
-- Fornecer suporte técnico e treinamento para os usuários, garantindo que possam utilizar o sistema de forma eficaz e produtiva.
-- Garantir a escalabilidade e a manutenibilidade do sistema, permitindo que novas funcionalidades possam ser adicionadas  e que o sistema possa ser atualizado e mantido de forma eficiente.
+- Fornecer suporte técnico e treinamento para os usuários, garantindo que possam utilizar o sistema de forma eficaz e
+  produtiva.
+- Garantir a escalabilidade e a manutenibilidade do sistema, permitindo que novas funcionalidades possam ser adicionadas
+  e que o sistema possa ser atualizado e mantido de forma eficiente.
 
 ## 1.3 Justificativa
 
-A justificativa para o desenvolvimento deste projeto está fundamentada na crescente demanda por cursos livres e treinamentos online, especialmente em meio à pandemia de Covid-19, que impulsionou a busca por oportunidades de ensino e aprendizado. Profissionais independentes e freelancers de diversas áreas têm se destacado como provedores de cursos e treinamentos, oferecendo conhecimentos e habilidades especializadas.
+A justificativa para o desenvolvimento deste projeto está fundamentada na crescente demanda por cursos livres e
+treinamentos online, especialmente em meio à pandemia de Covid-19, que impulsionou a busca por oportunidades de ensino e
+aprendizado. Profissionais independentes e freelancers de diversas áreas têm se destacado como provedores de cursos e
+treinamentos, oferecendo conhecimentos e habilidades especializadas.
 
-No entanto, muitos desses profissionais enfrentam dificuldades para criar, administrar e ministrar seus próprios cursos, devido à falta de ferramentas e recursos adequados. O sistema proposto visa suprir essa demanda, oferecendo uma solução autônoma e completa que permita a criação, administração e ministração de cursos de forma personalizada e simplificada.
+No entanto, muitos desses profissionais enfrentam dificuldades para criar, administrar e ministrar seus próprios cursos,
+devido à falta de ferramentas e recursos adequados. O sistema proposto visa suprir essa demanda, oferecendo uma solução
+autônoma e completa que permita a criação, administração e ministração de cursos de forma personalizada e simplificada.
 
-Além disso, o sistema proposto visa atender à necessidade de segurança e privacidade dos dados dos usuários, garantindo que as informações dos alunos e dos professores sejam protegidas e que a integridade dos dados seja preservada.
+Além disso, o sistema proposto visa atender à necessidade de segurança e privacidade dos dados dos usuários, garantindo
+que as informações dos alunos e dos professores sejam protegidas e que a integridade dos dados seja preservada.
 
 ## 1.4 Público-alvo
 
-O público-alvo deste projeto são os profissionais independentes e freelancers de diversas áreas, que desejam criar, administrar e ministrar seus próprios cursos de forma personalizada e simplificada. Este público inclui, mas não se limita a:
+O público-alvo deste projeto são os profissionais independentes e freelancers de diversas áreas, que desejam criar,
+administrar e ministrar seus próprios cursos de forma personalizada e simplificada. Este público inclui, mas não se
+limita a:
+
 - Professores e instrutores independentes
 - Consultores e especialistas em diversas áreas
 - Profissionais de educação e formação
@@ -95,17 +137,24 @@ sistema será desenvolvido como uma aplicação web responsiva e intuitiva, que 
 - Escalabilidade e manutenibilidade do sistema
 - Segurança e privacidade dos dados
 
-O sistema será desenvolvido utilizando tecnologias modernas e padrões de projeto, visando a segurança, escalabilidade e facilidade de uso. O sistema será disponibilizado como um serviço autônomo, que poderá ser acessado por meio de um navegador web em qualquer dispositivo.
+O sistema será desenvolvido utilizando tecnologias modernas e padrões de projeto, visando a segurança, escalabilidade e
+facilidade de uso. O sistema será disponibilizado como um serviço autônomo, que poderá ser acessado por meio de um
+navegador web em qualquer dispositivo.
 
 # 2. Requisitos
 
 ## 2.1 Levantamento de requisitos
 
-O levantamento de requisitos para o sistema de controle e gerenciamento de cursos livres para freelancers foi realizado por meio de entrevistas com profissionais independentes e freelancers de diversas áreas, bem como por meio de pesquisas e análises de sistemas similares. Os requisitos foram identificados e documentados com base nas necessidades e expectativas dos usuários, visando a criação de um sistema que atenda às demandas do público-alvo.
+O levantamento de requisitos para o sistema de controle e gerenciamento de cursos livres para freelancers foi realizado
+por meio de entrevistas com profissionais independentes e freelancers de diversas áreas, bem como por meio de pesquisas
+e análises de sistemas similares. Os requisitos foram identificados e documentados com base nas necessidades e
+expectativas dos usuários, visando a criação de um sistema que atenda às demandas do público-alvo.
 
 ## 2.2 Requisitos funcionais
 
-Os requisitos funcionais do sistema de controle e gerenciamento de cursos livres para freelancers incluem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Os principais requisitos funcionais identificados são:
+Os requisitos funcionais do sistema de controle e gerenciamento de cursos livres para freelancers incluem as
+funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Os principais requisitos
+funcionais identificados são:
 
 - Cadastro de professores e alunos
 - Criação e administração de cursos
@@ -115,7 +164,9 @@ Os requisitos funcionais do sistema de controle e gerenciamento de cursos livres
 
 ## 2.3 Requisitos não funcionais
 
-Os requisitos não funcionais do sistema de controle e gerenciamento de cursos livres para freelancers incluem as características e restrições que o sistema deve atender para garantir a qualidade, a segurança e a usabilidade. Os principais requisitos não funcionais identificados são:
+Os requisitos não funcionais do sistema de controle e gerenciamento de cursos livres para freelancers incluem as
+características e restrições que o sistema deve atender para garantir a qualidade, a segurança e a usabilidade. Os
+principais requisitos não funcionais identificados são:
 
 - Segurança e privacidade dos dados
 - Escalabilidade e manutenibilidade do sistema
@@ -125,7 +176,9 @@ Os requisitos não funcionais do sistema de controle e gerenciamento de cursos l
 
 ## 2.4 Regras de negócio
 
-As regras de negócio do sistema de controle e gerenciamento de cursos livres para freelancers incluem as diretrizes e restrições que devem ser seguidas para garantir a eficácia e a integridade do sistema. As principais regras de negócio identificadas são:
+As regras de negócio do sistema de controle e gerenciamento de cursos livres para freelancers incluem as diretrizes e
+restrições que devem ser seguidas para garantir a eficácia e a integridade do sistema. As principais regras de negócio
+identificadas são:
 
 - Os professores devem ser responsáveis por criar e administrar seus próprios cursos
 - Os alunos devem ser capazes de se matricular e acompanhar o progresso dos cursos
@@ -137,64 +190,70 @@ As regras de negócio do sistema de controle e gerenciamento de cursos livres pa
 
 # 3. Modelagem
 
-A modelagem do sistema de controle e gerenciamento de cursos livres para freelancers inclui a representação visual das funcionalidades e dos componentes do sistema, por meio de diagramas de casos de uso e de classes.
+A modelagem do sistema de controle e gerenciamento de cursos livres para freelancers inclui a representação visual das
+funcionalidades e dos componentes do sistema, por meio de diagramas de casos de uso e de classes.
 
 ## 3.1 Diagrama de casos de uso
 
-O diagrama de casos de uso do sistema  de controle e gerenciamento de cursos livres para freelancers representa as interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
-
+O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
+interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
 @startuml
 
 abstract class Pessoa {
-    - nomeCompleto: String
-    - cpf: String
-    - rg: String
-    - genero: String
-    - dataNascimento: LocalDate
-    - endereco: Endereco
-    - telefoneCelular: String
-    - telefoneFixo: String
-    - estrangeiro: Boolean
-}
+
+- nomeCompleto: String
+- cpf: String
+- rg: String
+- genero: String
+- dataNascimento: LocalDate
+- endereco: Endereco
+- telefoneCelular: String
+- telefoneFixo: String
+- estrangeiro: Boolean
+  }
 
 class Endereco {
-    - id: Long
-    - nome: String
-    - tipoLogradouro: TipoLogradouro
-    - numero: String
-    - complemento: String
-    - bairro: String
-    - cidade: String
-    - estado: String
-    - cep: String
-}
+
+- id: Long
+- nome: String
+- tipoLogradouro: TipoLogradouro
+- numero: String
+- complemento: String
+- bairro: String
+- cidade: String
+- estado: String
+- cep: String
+  }
 
 enum TipoLogradouro {
-    RUA,
-    AVENIDA,
-    TRAVESSA,
-    ALAMEDA,
-    ESTRADA,
-    RODOVIA,
-    OUTROS
+RUA,
+AVENIDA,
+TRAVESSA,
+ALAMEDA,
+ESTRADA,
+RODOVIA,
+OUTROS
 }
 
 class OrgaoInstituicaoEmpresa {
-    - id: Long
-    - nome: String
-    - sigla: String
-}
+
+- id: Long
+- nome: String
+- sigla: String
+  }
 
 class Escolaridade {
-    - id: Long
-    - descricao: String
-}
+
+- id: Long
+- descricao: String
+  }
 
 class NivelEscolaridade {
-    - id: Long
-    - descricao: String
-}
+
+- id: Long
+- descricao: String
+  }
 
 Pessoa "1" *-- "1" Endereco : mora em um
 
@@ -210,7 +269,13 @@ Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
-O diagrama de casos de uso ilustra as interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema. Os atores do sistema incluem professores, alunos e administradores, que interagem com o sistema por meio de casos de uso como cadastrar professor, cadastrar aluno, criar curso, administrar curso, matricular aluno, acompanhar progresso, avaliar curso, gerenciar pagamentos, suporte técnico, relatórios e configurações. Um ponto a ser considerado é a relação entre Professor e Administrador, pois o próprio Professor pode ser o Administrador do sistema, ou seja, ele pode ter acesso a todas as funcionalidades do sistema, inclusive as de administrador. Logo há a necessidade de extender o caso de uso de Professor para Administrador.
+O diagrama de casos de uso ilustra as interações entre os usuários e o sistema, identificando as funcionalidades e os
+fluxos de trabalho do sistema. Os atores do sistema incluem professores, alunos e administradores, que interagem com o
+sistema por meio de casos de uso como cadastrar professor, cadastrar aluno, criar curso, administrar curso, matricular
+aluno, acompanhar progresso, avaliar curso, gerenciar pagamentos, suporte técnico, relatórios e configurações. Um ponto
+a ser considerado é a relação entre Professor e Administrador, pois o próprio Professor pode ser o Administrador do
+sistema, ou seja, ele pode ter acesso a todas as funcionalidades do sistema, inclusive as de administrador. Logo há a
+necessidade de extender o caso de uso de Professor para Administrador.
 
 ---
 
@@ -223,8 +288,6 @@ O diagrama de casos de uso ilustra as interações entre os usuários e o sistem
 ## Texto de apresentação
 
 ## Solução
-
-
 
 ## Elementos do Projeto
 
