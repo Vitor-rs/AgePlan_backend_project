@@ -1,5 +1,6 @@
 package com.ageplan.ageplan_backend_project.Usuario;
 
+import com.ageplan.ageplan_backend_project.Privilegios.Privilegios;
 import com.ageplan.ageplan_backend_project.Roles.Roles;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -9,12 +10,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -30,7 +28,8 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public abstract class Usuario implements UserDetails, Serializable {
+@Setter
+public abstract class Usuario implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
@@ -42,7 +41,7 @@ public abstract class Usuario implements UserDetails, Serializable {
      * -- SETTER --
      * Sets nome usuario.
      */
-    @Setter
+
     @NotNull
     @NotBlank
     @NotEmpty
@@ -80,44 +79,53 @@ public abstract class Usuario implements UserDetails, Serializable {
     )
     private Set<Roles> roles = new HashSet<>();
 
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "usuario_privilegios",
+            joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "privilegio_id")
+    )
+    private Set<Privilegios> privilegios = new HashSet<>();
+
     /*----------------------------------------------------------------*/
 
     // Métodos da interface UserDetails
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
-    }
-
-    @Override
-    public String getPassword() {
-        return null;
-    }
-
-    @Override
-    public String getUsername() {
-        return null;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
-    }
+//    @Override
+//    public Collection<? extends GrantedAuthority> getAuthorities() {
+//        return null;
+//    }
+//
+//    @Override
+//    public String getPassword() {
+//        return null;
+//    }
+//
+//    @Override
+//    public String getUsername() {
+//        return null;
+//    }
+//
+//    @Override
+//    public boolean isAccountNonExpired() {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean isAccountNonLocked() {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean isCredentialsNonExpired() {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean isEnabled() {
+//        return false;
+//    }
 
     /*----------------------------------------------------------------*/
     // Métodos da classe Usuario
@@ -148,6 +156,24 @@ public abstract class Usuario implements UserDetails, Serializable {
      */
     public boolean hasRole(Roles role) {
         return this.roles.contains(role);
+    }
+
+
+    /*----------------------------------------------------------------*/
+    // PRIVILEGIOS
+
+    public void addPrivilegio(Privilegios privilegio) {
+        this.privilegios.add(privilegio);
+        privilegio.getUsuarios().add(this);
+    }
+
+    public void removePrivilegio(Privilegios privilegio) {
+        this.privilegios.remove(privilegio);
+        privilegio.getUsuarios().remove(this);
+    }
+
+    public boolean hasPrivilegio(Privilegios privilegio) {
+        return this.privilegios.contains(privilegio);
     }
 
 

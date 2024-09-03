@@ -3,7 +3,6 @@ package com.ageplan.ageplan_backend_project.Administrador;
 import com.ageplan.ageplan_backend_project.Pessoa.Pessoa;
 import jakarta.persistence.Entity;
 import lombok.Getter;
-import org.springframework.security.access.prepost.PreAuthorize;
 
 
 @Entity
@@ -35,11 +34,12 @@ public class Administrador extends Pessoa {
     */
 
     // Métodos para gerenciar Instrutores e Alunos
-
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public void listarInstrutores() {
-        // Listar Instrutores
-    }
+//
+//    @PreAuthorize("hasRole('ROLE_ADMIN')")
+//    public void listarInstrutores() {
+//
+//        // Listar Instrutores
+//    }
 
 
 }
