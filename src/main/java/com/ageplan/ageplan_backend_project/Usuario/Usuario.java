@@ -26,7 +26,7 @@ import java.util.Set;
  * de segurança, onde será usado o Spring Security para autenticação e
  * autorização de usuários.
  */
-@MappedSuperclass
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
