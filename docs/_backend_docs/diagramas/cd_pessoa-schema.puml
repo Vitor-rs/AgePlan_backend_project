@@ -1,6 +1,6 @@
 @startuml
-'Diagrama de clases voltado à cionstrução da classe Pessoa e suas subclasses
-'como o Endereco por exemplo
+'Diagrama de clases voltado à cionstrução da classe pessoa e suas subclasses
+'como o endereco por exemplo
 
 abstract class Pessoa {
     - nomeCompleto: String
@@ -74,7 +74,7 @@ Escolaridade "1" -- "1..*" NivelEscolaridade
 
 Pessoa "1..*" -- "1..*" OrgaoInstituicaoEmpresa
 
-'A classe Endereco contem apenas um atributo do tipo TipoLogradouro
+'A classe endereco contem apenas um atributo do tipo TipoLogradouro
 'que é um enum que contem os tipos de logradouros existentes
 'como por exemplo: RUA, AVENIDA, TRAVESSA, ALAMEDA, ESTRADA, RODOVIA, OUTROS
 'Mas um tipo de logradouro pode estar contido em vários endereços

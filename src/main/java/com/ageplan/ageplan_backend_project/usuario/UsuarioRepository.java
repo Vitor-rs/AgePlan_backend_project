@@ -1,4 +1,4 @@
-package com.ageplan.ageplan_backend_project.Usuario;// UsuarioRepository.java
+package com.ageplan.ageplan_backend_project.usuario;// UsuarioRepository.java
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

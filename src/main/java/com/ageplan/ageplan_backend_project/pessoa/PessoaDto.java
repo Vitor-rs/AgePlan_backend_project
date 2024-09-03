@@ -1,6 +1,5 @@
-package com.ageplan.ageplan_backend_project.Pessoa;
+package com.ageplan.ageplan_backend_project.pessoa;
 
-import com.ageplan.ageplan_backend_project.Usuario.UsuarioDto;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -16,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public abstract class PessoaDto extends UsuarioDto {
+public abstract class PessoaDto {
 
     private String nomeCompleto;
 
@@ -47,12 +46,12 @@ public abstract class PessoaDto extends UsuarioDto {
     /*----------------------------------------------------------------------*/
 
     /**
-     * Instantiates a new Pessoa dto.
+     * Instantiates a new pessoa dto.
      *
      * @param pessoa the pessoa
      */
-    public PessoaDto(Pessoa pessoa) {
-        super(pessoa);
+    protected PessoaDto(Pessoa pessoa) {
+        super();
         this.nomeCompleto = pessoa.getNomeCompleto();
         this.cpf = pessoa.getCpf();
         this.rg = pessoa.getRg();

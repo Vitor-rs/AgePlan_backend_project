@@ -1,10 +1,6 @@
-package com.ageplan.ageplan_backend_project.Pessoa;
+package com.ageplan.ageplan_backend_project.pessoa;
 
-import com.ageplan.ageplan_backend_project.Usuario.Usuario;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Inheritance;
-import jakarta.persistence.InheritanceType;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -13,19 +9,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 /**
- * A classe Pessoa representa uma pessoa física que pode ser um
+ * A classe pessoa representa uma pessoa física que pode ser um
  * usuário do sistema ou um cliente. Ela será abstrata para que
  * não seja mapeada no banco de dados, mas sim suas subclasses
  * como as classes Instrutor e Aluno.
  */
-@Entity
+@MappedSuperclass
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Pessoa extends Usuario {
+public abstract class Pessoa implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     /**
      * Nome completo da pessoa.

@@ -1,7 +1,7 @@
-package com.ageplan.ageplan_backend_project.Usuario;
+package com.ageplan.ageplan_backend_project.usuario;
 
-import com.ageplan.ageplan_backend_project.Privilegios.Privilegios;
-import com.ageplan.ageplan_backend_project.Roles.Roles;
+import com.ageplan.ageplan_backend_project.privilegio.Privilegios;
+import com.ageplan.ageplan_backend_project.roles.Roles;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -128,7 +128,7 @@ public abstract class Usuario implements Serializable {
 //    }
 
     /*----------------------------------------------------------------*/
-    // Métodos da classe Usuario
+    // Métodos da classe usuario
 
     /**
      * Add role.

@@ -1,4 +1,4 @@
-package com.ageplan.ageplan_backend_project.Usuario;
+package com.ageplan.ageplan_backend_project.usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

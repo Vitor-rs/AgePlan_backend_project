@@ -1,4 +1,4 @@
-package com.ageplan.ageplan_backend_project.Roles;
+package com.ageplan.ageplan_backend_project.roles;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;

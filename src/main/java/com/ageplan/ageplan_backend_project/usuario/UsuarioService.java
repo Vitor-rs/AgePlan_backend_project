@@ -1,7 +1,7 @@
-package com.ageplan.ageplan_backend_project.Usuario;
+package com.ageplan.ageplan_backend_project.usuario;
 
 
-import com.ageplan.ageplan_backend_project.Exceptions.ResourceNotFoundException;
+import com.ageplan.ageplan_backend_project.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +27,7 @@ public class UsuarioService {
     }
 
     public Usuario updateUsuario(Long id, Usuario usuarioDetails) {
-        Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Usuario not found for this id :: " + id));
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("usuario not found for this id :: " + id));
         usuario.setNomeUsuario(usuarioDetails.getNomeUsuario());
         usuario.setSenha(usuarioDetails.getSenha());
         usuario.setEmail(usuarioDetails.getEmail());
@@ -37,7 +37,7 @@ public class UsuarioService {
     }
 
     public void deleteUsuario(Long id) {
-        Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Usuario not found for this id :: " + id));
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("usuario not found for this id :: " + id));
         usuarioRepository.delete(usuario);
     }
 }

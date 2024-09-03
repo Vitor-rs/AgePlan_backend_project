@@ -1,6 +1,6 @@
-package com.ageplan.ageplan_backend_project.Privilegios;
+package com.ageplan.ageplan_backend_project.privilegio;
 
-import com.ageplan.ageplan_backend_project.Usuario.Usuario;
+import com.ageplan.ageplan_backend_project.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * A classe Privilegios representa os privilégios que podem ser atribuídos aos usuários.
+ * A classe privilegio representa os privilégios que podem ser atribuídos aos usuários.
  */
 @Entity
 @AllArgsConstructor
@@ -40,7 +40,7 @@ public class Privilegios {
     private String descricao;
 
     /**
-     * Relação muitos-para-muitos com a classe Usuario.
+     * Relação muitos-para-muitos com a classe usuario.
      */
     @ManyToMany(mappedBy = "privilegios")
     private Set<Usuario> usuarios = new HashSet<>();

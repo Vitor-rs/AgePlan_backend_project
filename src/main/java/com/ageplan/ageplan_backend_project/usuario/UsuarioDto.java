@@ -1,6 +1,6 @@
-package com.ageplan.ageplan_backend_project.Usuario;
+package com.ageplan.ageplan_backend_project.usuario;
 
-import com.ageplan.ageplan_backend_project.Roles.Roles;
+import com.ageplan.ageplan_backend_project.roles.Roles;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -48,7 +48,7 @@ public class UsuarioDto implements Serializable {
     private Set<String> roles;
 
     /**
-     * Instantiates a new Usuario dto.
+     * Instantiates a new usuario dto.
      *
      * @param usuario the usuario
      */

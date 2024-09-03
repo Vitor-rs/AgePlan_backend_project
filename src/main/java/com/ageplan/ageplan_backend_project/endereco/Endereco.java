@@ -1,4 +1,4 @@
-package com.ageplan.ageplan_backend_project.Endereco;
+package com.ageplan.ageplan_backend_project.endereco;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
