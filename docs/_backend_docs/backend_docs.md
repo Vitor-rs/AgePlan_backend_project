@@ -198,7 +198,32 @@ funcionalidades e dos componentes do sistema, por meio de diagramas de casos de 
 O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
-[//]: # ( [MermaidChart: 3c5f9fed-489f-4e84-81aa-93eb0f7c8b69]
+```mermaid
+graph TD
+    A[Usuário] --> B(Cadastrar Professor)
+    A --> C(Cadastrar Aluno)
+    A --> D(Criar Curso)
+    A --> E(Administrar Curso)
+    A --> F(Matricular Aluno)
+    A --> G(Acompanhar Progresso)
+    A --> H(Avaliar Curso)
+    A --> I(Gerenciar Pagamentos)
+    A --> J(Suporte Técnico)
+    A --> K(Relatórios)
+    A --> L(Configurações)
+    B --> M(Professor)
+    C --> N(Aluno)
+    D --> O(Curso)
+    E --> P(Professor)
+    F --> Q(Aluno)
+    G --> R(Professor)
+    H --> S(Professor)
+    I --> T(Administrador)
+    J --> U(Administrador)
+    K --> V(Administrador)
+    L --> W(Administrador)
+    M --> X(Administrador)
+```
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
