@@ -1,0 +1,92 @@
+@startuml
+'Diagrama de clases voltado à cionstrução da classe pessoa e suas subclasses
+'como o endereco por exemplo
+
+abstract class Pessoa {
+    - nomeCompleto: String
+    - cpf: String
+    - rg: String
+    - genero: String
+    - dataNascimento: LocalDate
+    - endereco: Endereco
+    - telefoneCelular: String
+    - telefoneFixo: String
+    - estrangeiro: Boolean
+}
+
+class Endereco {
+    - id: Long
+    - nome: String
+    - tipoLogradouro: TipoLogradouro
+    - numero: String
+    - complemento: String
+    - bairro: String
+    - cidade: String
+    - estado: String
+    - cep: String
+}
+
+enum TipoLogradouro {
+    RUA,
+    AVENIDA,
+    TRAVESSA,
+    ALAMEDA,
+    ESTRADA,
+    RODOVIA,
+    OUTROS
+}
+
+class OrgaoInstituicaoEmpresa {
+    - id: Long
+    - nome: String
+    - sigla: String
+}
+
+class Escolaridade {
+    - id: Long
+    - descricao: String
+}
+
+class NivelEscolaridade {
+    - id: Long
+    - descricao: String
+}
+
+'Uma pessoa poder ter apenas um endereço, mas um endereço pode ser de várias pessoas
+'desde que essas pessoas têm algum tipo de relação entre si, seja ela familiar ou não
+
+Pessoa "1" *-- "1" Endereco : mora em um
+
+'Uma pessoa pode tem apenas uma escolaridade, mas uma escolaridade pode ser de várias pessoas
+
+Pessoa "1..*" -- "1" Escolaridade
+
+'Um exemplo de Escalridade é o Ensino Médio, que pode ser de várias pessoas.
+'Ou também o Ensino Superior, que também pode ser de várias pessoas
+'O ensino médio comtem 3 níveis de escolaridade: 1º, 2º e 3º ano
+'então a classe NivelEscolaridade é uma classe que está contida dentro da classe Escolaridade
+
+Escolaridade "1" -- "1..*" NivelEscolaridade
+
+'Se uma pessoa estuda, ele pode estar estudando em uma ou mais instituições
+'de ensino, como por exemplo, uma pessoa pode estar estudando em uma faculdade
+'e em um cursinho pré-vestibular ao mesmo tempo
+
+Pessoa "1..*" -- "1..*" OrgaoInstituicaoEmpresa
+
+'A classe endereco contem apenas um atributo do tipo TipoLogradouro
+'que é um enum que contem os tipos de logradouros existentes
+'como por exemplo: RUA, AVENIDA, TRAVESSA, ALAMEDA, ESTRADA, RODOVIA, OUTROS
+'Mas um tipo de logradouro pode estar contido em vários endereços
+
+Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
+
+'Quando eu quizer apagar um endereco, eu não quero apagar a pessoa que mora nele
+'então se eu quiser um endereço, primeiro eu tenho que apagar a pessoa que mora nele
+'Isso é uma relação de dependência, pois o endereço depende da pessoa para existir
+'então se eu apagar a pessoa, o endereço também será apagado
+
+
+
+
+@enduml
