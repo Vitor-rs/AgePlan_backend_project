@@ -200,6 +200,7 @@ interações entre os usuários e o sistema, identificando as funcionalidades e 
 
 ```plantuml
 @startuml
+
 left to right direction
 actor Professor
 actor Aluno
