@@ -3,15 +3,14 @@
 
 ## Visão Geral
 
-Este projeto visa desenvolver um sistema independente de controle e gerenciamento de cursos livres para profissionais freelancers e autônomos. A plataforma permite que instrutores criem, administrem e ministrem cursos personalizados de forma simplificada, atendendo à crescente demanda por oportunidades de ensino e aprendizado online.
+Este projeto visa desenvolver um sistema independente de controle e gerenciamento de cursos livres para profissionais freelancers e autônomos. A plataforma permite que instrutores criem, administrem e ministrem cursos personalizados de forma simplificada, atendendo à crescente demanda por oportunidades de ensino e aprendizado.
 
 ## Características Principais
 
-- Cadastro e autenticação de professores e alunos
+- Cadastro de professores e alunos
 - Criação e gerenciamento de cursos
 - Sistema de matrículas e acompanhamento de progresso
-- Análise de desempenho e avaliação de cursos
-- Gestão financeira e integração de métodos de pagamento
+- Análise de desempenho e avaliação de alunos(as)
 - Interface responsiva e intuitiva
 - Relatórios e análises
 
