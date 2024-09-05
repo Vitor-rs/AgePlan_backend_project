@@ -198,7 +198,11 @@ funcionalidades e dos componentes do sistema, por meio de diagramas de casos de 
 O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
+
+
+
 ```plantuml
+
 @startuml
 
 left to right direction
