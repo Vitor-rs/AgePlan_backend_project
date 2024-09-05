@@ -198,31 +198,42 @@ funcionalidades e dos componentes do sistema, por meio de diagramas de casos de 
 O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
-```mermaid
-graph TD
-    A[Usuário] --> B(Cadastrar Professor)
-    A --> C(Cadastrar Aluno)
-    A --> D(Criar Curso)
-    A --> E(Administrar Curso)
-    A --> F(Matricular Aluno)
-    A --> G(Acompanhar Progresso)
-    A --> H(Avaliar Curso)
-    A --> I(Gerenciar Pagamentos)
-    A --> J(Suporte Técnico)
-    A --> K(Relatórios)
-    A --> L(Configurações)
-    B --> M(Professor)
-    C --> N(Aluno)
-    D --> O(Curso)
-    E --> P(Professor)
-    F --> Q(Aluno)
-    G --> R(Professor)
-    H --> S(Professor)
-    I --> T(Administrador)
-    J --> U(Administrador)
-    K --> V(Administrador)
-    L --> W(Administrador)
-    M --> X(Administrador)
+```plantuml
+@startuml
+left to right direction
+actor Professor
+actor Aluno
+actor Administrador
+
+rectangle Sistema {
+    usecase (Cadastrar Professor) as CP
+    usecase (Cadastrar Aluno) as CA
+    usecase (Criar Curso) as CC
+    usecase (Administrar Curso) as AC
+    usecase (Matricular Aluno) as MA
+    usecase (Acompanhar Progresso) as AP
+    usecase (Avaliar Curso) as AV
+    usecase (Gerenciar Pagamentos) as GP
+    usecase (Suporte Técnico) as ST
+    usecase (Relatórios) as R
+    usecase (Configurações) as C
+
+    Professor -- (CP)
+    Aluno -- (CA)
+    Professor -- (CC)
+    Professor -- (AC)
+    Aluno -- (MA)
+    Professor -- (AP)
+    Professor -- (AV)
+    Professor -- (GP)
+    Administrador -- (GP)
+    Administrador -- (ST)
+    Administrador -- (R)
+    Administrador -- (C)
+}
+
+@enduml
+
 ```
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
