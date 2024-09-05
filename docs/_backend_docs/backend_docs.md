@@ -198,74 +198,7 @@ funcionalidades e dos componentes do sistema, por meio de diagramas de casos de 
 O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
-@startuml
-
-abstract class Pessoa {
-
-- nomeCompleto: String
-- cpf: String
-- rg: String
-- genero: String
-- dataNascimento: LocalDate
-- endereco: Endereco
-- telefoneCelular: String
-- telefoneFixo: String
-- estrangeiro: Boolean
-  }
-
-class Endereco {
-
-- id: Long
-- nome: String
-- tipoLogradouro: TipoLogradouro
-- numero: String
-- complemento: String
-- bairro: String
-- cidade: String
-- estado: String
-- cep: String
-  }
-
-enum TipoLogradouro {
-RUA,
-AVENIDA,
-TRAVESSA,
-ALAMEDA,
-ESTRADA,
-RODOVIA,
-OUTROS
-}
-
-class OrgaoInstituicaoEmpresa {
-
-- id: Long
-- nome: String
-- sigla: String
-  }
-
-class Escolaridade {
-
-- id: Long
-- descricao: String
-  }
-
-class NivelEscolaridade {
-
-- id: Long
-- descricao: String
-  }
-
-Pessoa "1" *-- "1" Endereco : mora em um
-
-Pessoa "1..*" -- "1" Escolaridade
-
-Escolaridade "1" -- "1..*" NivelEscolaridade
-
-Pessoa "1..*" -- "1..*" OrgaoInstituicaoEmpresa
-
-Endereco "1" *-- "1..*" TipoLogradouro : pode ser um/a
-
-@enduml
+[//]: # ( [MermaidChart: 3c5f9fed-489f-4e84-81aa-93eb0f7c8b69]
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
