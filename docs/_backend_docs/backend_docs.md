@@ -290,8 +290,8 @@ Esta tabela apresenta as classes identificadas no diagrama de classes, descreven
 
 #### Pontos a serem considerados:
 
-- **Herança**: A classe `Pessoa` é uma classe abstrata da qual as classes `Professor`, `Aluno` e `Administrador` herdam, representando a relação de herança entre as entidades. Isso se de ao fato de que todos os usuários do sistema possuem características em comum, como nome, e-mail e senha, que são representadas pela classe `Pessoa`. Logo **Pessoa** não será instanciada, mas sim suas subclasses.
-- **Associação**: A classe `Curso` possui uma associação com a classe `Professor`, indicando que um curso é criado por um professor. A classe `Matrícula` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno se matricula em um curso. A classe `Pagamento` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno realiza um pagamento para se matricular em um curso.
+- **Herança**: A classe `Pessoa` é uma classe abstrata da qual as classes `Professor`, `Aluno` e `Administrador` herdam, representando a relação de herança entre as entidades. Isso se de ao fato de que todos os usuários do sistema possuem atributos em comum, como nome, CPF, RG, data de nascimento, endereço e entre outros, que são representadas pela classe `Pessoa`. Logo **Pessoa** não será instanciada, mas sim suas subclasses.
+- **Associação**: A classe `Curso` possui uma associação com a classe `Professor`, indicando que um curso é criado por um Professor ou um Administrador. A classe `Matrícula` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno é matriculado em um curso por um Professor. A classe `Pagamento` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno realiza um pagamento para se matricular em um curso.
 - **Agregação**: A classe `Relatório` possui uma agregação com a classe `Curso`, indicando que um relatório é gerado a partir de um curso. A classe `Configuração` possui uma agregação com a classe `Privilégio`, indicando que as configurações do sistema incluem permissões de acesso.
 - **Composição**: A classe `Endereço` possui uma composição com a classe `Pessoa`, indicando que um endereço é parte de uma pessoa. A classe `Contrato` possui uma composição com as classes `Professor` e `Aluno`, indicando que um contrato é estabelecido entre um professor e um aluno para a realização de um curso.
 
@@ -299,6 +299,5 @@ Esta tabela apresenta as classes identificadas no diagrama de classes, descreven
 
 O diagrama de sequência do sistema de controle e gerenciamento de cursos livres para freelancers representa a interação entre os atores e o sistema em um cenário específico, identificando as mensagens trocadas e as etapas do processo.
 
-![ds_criar_curso](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/sequencia.iuml)
 
 
