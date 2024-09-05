@@ -256,31 +256,49 @@ Esta tabela apresenta os casos de uso identificados no diagrama, descrevendo as 
 ### 3.1.2 Diagrama de Classes
 
 O diagrama de classes do sistema de controle e gerenciamento de cursos livres para freelancers representa a estrutura e
-os relacionamentos entre as classes do sistema, identificando as entidades e os atributos do sistema. O diagrama de
-classes inclui as seguintes classes:
-
-- **Professor**: Representa um professor que pode criar e gerenciar cursos.
-- **Aluno**: Representa um aluno que pode se matricular em cursos e acompanhar seu progresso.
-- **Curso**: Representa um curso criado por um professor, com detalhes como título, descrição e carga horária.
-- **Matrícula**: Representa a matrícula de um aluno em um curso, com informações como data de matrícula e status.
-- **Pagamento**: Representa um pagamento realizado por um aluno para se matricular em um curso, com informações como valor e data de pagamento.
-- **Relatório**: Representa um relatório gerado por um professor, com informações sobre o desempenho dos alunos e o andamento dos cursos.
-- **Configuração**: Representa as configurações do sistema, como permissões de acesso e configurações de segurança.
-- **Usuário**: Representa um usuário do sistema, com informações como nome, e-mail e senha.
-- **Privilégio**: Representa os privilégios de acesso de um usuário no sistema, como leitura, escrita e administração.
-- **Administrador**: Representa um administrador do sistema, com privilégios avançados para gerenciar o sistema.
-- **Role**: Representa o papel de um usuário no sistema, como professor, aluno ou administrador.
-- **Endereço**: Representa o endereço de um usuário, com informações como rua, número, bairro e cidade.
-- **Pessoa**: Classe abstrata da qual as classes Professor, Aluno e Administrador herdam.
-- **Contrato**: Representa um contrato entre um professor e um aluno para a realização de um curso.
-- **Avaliação**: Representa a avaliação de um aluno em um curso, com informações como nota e comentários.
-- **Aula**: Representa uma aula de um curso, com informações como data, horário e conteúdo.
-- **Presença**: Representa a presença de um aluno em uma aula, com informações como data e horário de entrada e saída.
-- **Método de Pagamento**: Representa um método de pagamento disponível para os alunos, como cartão de crédito, boleto ou transferência bancária.
-- **Desempenho**: Representa o desempenho de um aluno em um curso, com informações como notas, frequência e participação.
-- **Planejameto**: Representa o planejamento de um curso, com informações como ementa, objetivos e metodologia.
-- **Método-Avaliação**: Representa os métodos de avaliação de um curso, como provas, trabalhos e participação.
-
-O diagrama de classes ilustra as classes e os relacionamentos do sistema, identificando as entidades e os atributos do mesmo.
+os relacionamentos entre as classes do sistema, identificando as entidades e os atributos do sistema.
 
 ![cd_geral](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/cd_geral.iuml)
+
+#### Descrição das Classes (Tabela):
+
+Esta tabela apresenta as classes identificadas no diagrama de classes, descrevendo as entidades e os atributos do sistema.
+
+| Classe              | Descrição                                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------------------|
+| Professor           | Representa um professor que pode criar e gerenciar cursos.                                                             |
+| Aluno               | Representa um aluno que pode se matricular em cursos e acompanhar seu progresso.                                       |
+| Curso               | Representa um curso criado por um professor, com detalhes como título, descrição e carga horária.                      |
+| Matrícula           | Representa a matrícula de um aluno em um curso, com informações como data de matrícula e status.                       |
+| Pagamento           | Representa um pagamento realizado por um aluno para se matricular em um curso.                                         |
+| Relatório           | Representa um relatório gerado por um professor, com informações sobre o desempenho dos alunos.                        |
+| Configuração        | Representa as configurações do sistema, como permissões de acesso e configurações de segurança.                        |
+| Usuário             | Representa um usuário do sistema, com informações como nome, e-mail e senha.                                           |
+| Privilégio          | Representa os privilégios de acesso de um usuário no sistema, como leitura, escrita e administração.                   |
+| Administrador       | Representa um administrador do sistema, com privilégios avançados para gerenciar o sistema.                            |
+| Role                | Representa o papel de um usuário no sistema, como professor, aluno ou administrador.                                   |
+| Endereço            | Representa o endereço de um usuário, com informações como rua, número, bairro e cidade.                                |
+| Pessoa              | Classe abstrata da qual as classes Professor, Aluno e Administrador herdam.                                            |
+| Contrato            | Representa um contrato entre um professor e um aluno para a realização de um curso.                                    |
+| Avaliação           | Representa a avaliação de um aluno em um curso, com informações como nota e comentários.                               |
+| Aula                | Representa uma aula de um curso, com informações como data, horário e conteúdo.                                        |
+| Presença            | Representa a presença de um aluno em uma aula, com informações como data e horário de entrada e saída.                 |
+| Método de Pagamento | Representa um método de pagamento disponível para os alunos, como cartão de crédito, boleto ou transferência bancária. |
+| Desempenho          | Representa o desempenho de um aluno em um curso, com informações como notas, frequência e participação.                |
+| Planejamento        | Representa o planejamento de um curso, com informações como ementa, objetivos e metodologia.                           |
+| Método-Avaliação    | Representa os métodos de avaliação de um curso, como provas, trabalhos e participação.                                 |
+
+#### Pontos a serem considerados:
+
+- **Herança**: A classe `Pessoa` é uma classe abstrata da qual as classes `Professor`, `Aluno` e `Administrador` herdam, representando a relação de herança entre as entidades. Isso se de ao fato de que todos os usuários do sistema possuem características em comum, como nome, e-mail e senha, que são representadas pela classe `Pessoa`. Logo **Pessoa** não será instanciada, mas sim suas subclasses.
+- **Associação**: A classe `Curso` possui uma associação com a classe `Professor`, indicando que um curso é criado por um professor. A classe `Matrícula` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno se matricula em um curso. A classe `Pagamento` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno realiza um pagamento para se matricular em um curso.
+- **Agregação**: A classe `Relatório` possui uma agregação com a classe `Curso`, indicando que um relatório é gerado a partir de um curso. A classe `Configuração` possui uma agregação com a classe `Privilégio`, indicando que as configurações do sistema incluem permissões de acesso.
+- **Composição**: A classe `Endereço` possui uma composição com a classe `Pessoa`, indicando que um endereço é parte de uma pessoa. A classe `Contrato` possui uma composição com as classes `Professor` e `Aluno`, indicando que um contrato é estabelecido entre um professor e um aluno para a realização de um curso.
+
+### 3.1.3 Diagrama de Sequência
+
+O diagrama de sequência do sistema de controle e gerenciamento de cursos livres para freelancers representa a interação entre os atores e o sistema em um cenário específico, identificando as mensagens trocadas e as etapas do processo.
+
+![ds_criar_curso](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/sequencia.iuml)
+
+
