@@ -198,10 +198,9 @@ funcionalidades e dos componentes do sistema, por meio de diagramas de casos de 
 O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
-![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/Vitor-rs/AgePlan_backend_project/blob/master/docs/_backend_docs/diagramas/cd_pessoa-schema.iuml)
 
+![Diagrama de Caso de Uso](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/Vitor-rs/AgePlan_backend_project/blob/master/docs/_backend_docs/diagramas/cd_pessoa-schema.iuml)
 
-![Diagrama de Casos de Uso](
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
