@@ -1,0 +1,49 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor Professor
+actor Aluno
+actor Administrador
+
+rectangle "Sistema de Controle e Gerenciamento de Cursos Livres" {
+  usecase "Cadastrar Professor" as UC1
+  usecase "Cadastrar Aluno" as UC2
+  usecase "Criar Curso" as UC3
+  usecase "Administrar Curso" as UC4
+  usecase "Matricular Aluno" as UC5
+  usecase "Acompanhar Progresso" as UC6
+  usecase "Avaliar Curso" as UC7
+  usecase "Gerenciar Pagamentos" as UC8
+  usecase "Suporte Técnico" as UC9
+  usecase "Relatórios" as UC10
+  usecase "Configurações" as UC11
+}
+
+Professor --> UC1
+Professor --> UC3
+Professor --> UC4
+Professor --> UC6
+Professor --> UC8
+
+Aluno --> UC2
+Aluno --> UC5
+Aluno --> UC6
+Aluno --> UC7
+
+Administrador --> UC9
+Administrador --> UC10
+Administrador --> UC11
+Administrador --> UC1
+Administrador --> UC2
+Administrador --> UC3
+Administrador --> UC4
+Administrador --> UC5
+Administrador --> UC6
+Administrador --> UC7
+Administrador --> UC8
+
+Professor <|-- Administrador
+
+@enduml

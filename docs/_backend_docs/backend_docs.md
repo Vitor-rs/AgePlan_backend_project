@@ -198,9 +198,10 @@ funcionalidades e dos componentes do sistema, por meio de diagramas de casos de 
 O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
-https://www.plantuml.com/plantuml/uml/dLPDRzj64BtpLmny4H38BfBST7DZ5J1WMwbbvpuYnym699VT9OMWHVzBWnu21-Ynbnp3FzQtorsIeX87gG-ITkVxpSnRBouKvuPBfameBTYAfRqk6iuqTNzHgdHb6zDs7xk_DMNiLQnGBTPg9Y7RiiN7hh-toIBLfIPDKcLY9DLKQqFoNigwq4d2EpZZjEdTqElUony9uU-KAbtAAmrDQVIAjerHLHv4QVqmkp7vx2ANIipSBkE6RzYcgfJAERtIAHSNt4YGnpHNj0w_Wg2HGXvq9Q-aQ0isCxTH-ejwFuyehi8g5-Lo-LdhGhXA_aoIlk8OPQXPPIwfmTf1C8-bQdsbqQDCjyxdtS4vshNbSV6fnp9KVY3PiJB7wYhZJ8xBGQ2vfjJ33KeJH9-b5UgxlJzV-X_dRzOtbnVXS7UButORHLVdr-ieMcyXZ8VRpSNcpMKuRExlRZVR4ScDoLbVOZXLqwgKzRgiZLZ-0M2joWkUrX5QP5EDZdimlkKj4viQ5_NO_4RjfVZVFXRtsCImNBN6h63K374j5TOCAFVpsdtKIofdDrwVBDJnjUy-60M5tXNM4j5m_LihwAWT1THqdqhY8eSdDsZEraZ1_RvZSWnSgYNSliEs5qmFNAf2iI7TKWMT90bBVFByX9wTdlhlOSfNL6e3mnAP7XU7signDgXDK8lr7Tu-MUEOoTdPinEAkKpCVGgHZPmB2Ba8hhj7qDQwighITDqzPWeOExoU27cMB3OjDLpkkiTojDwsjHYbJMyVnK-sPmEilMtf8xlLTU2y1CR_x4LPPpG5OaNFltnUqeildy71B_79bKuMw9Thsy3InxE88XscGTwFGzDzGBogWGR2eELJeZ-4xy2NGzU3xE4-YWMmj-AZnSV2Dct6IunH0DLnYmdN5TuRFoRi9gjabAp2ScCM_nK_mW6a9Vb7PlAoBATndlBzm6bR-EmMqjzHsXeuVGj_fdiytSD4xHpb4wCROX48dQZrLyVB__e64w7-yuZYy1ewdAT3JupLtxKD8DVz0ixeVU5wvBj6dcRTCJZHrblusIW62mjCb6tGn-4rdW2ryfGyqF58nGCD3nGyq6-atiLrdtBaYJ7c5F9-aZpWVifTGf6YiAC3DOnyuK6SFH-hSLtQyYU7vQzjtySM4AZVFIbopcQam1HJ83qfEPJW96WCW-6mytnKOGI7RN7jyKxxO5EAhGt-Ry13xXI0w5ll-7jkBt4PzsoaKXIJ2RgUTP-gL64BQeqHrnFwxiNYTYyECZlkTDrKPfRkB8VbWQV8E2W8g-rLCynlalm7
+![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/Vitor-rs/AgePlan_backend_project/blob/master/docs/_backend_docs/diagramas/cd_pessoa-schema.iuml)
 
-![Diagrama de Casos de Uso](https://www.plantuml.com/plantuml/png/~1dLPDRzj64BtpLmny4H38BfBST7DZ5J1WMwbbvpuYnym699VT9OMWHVzBWnu21-Ynbnp3FzQtorsIeX87gG-ITkVxpSnRBouKvuPBfameBTYAfRqk6iuqTNzHgdHb6zDs7xk_DMNiLQnGBTPg9Y7RiiN7hh-toIBLfIPDKcLY9DLKQqFoNigwq4d2EpZZjEdTqElUony9uU-KAbtAAmrDQVIAjerHLHv4QVqmkp7vx2ANIipSBkE6RzYcgfJAERtIAHSNt4YGnpHNj0w_Wg2HGXvq9Q-aQ0isCxTH-ejwFuyehi8g5-Lo-LdhGhXA_aoIlk8OPQXPPIwfmTf1C8-bQdsbqQDCjyxdtS4vshNbSV6fnp9KVY3PiJB7wYhZJ8xBGQ2vfjJ33KeJH9-b5UgxlJzV-X_dRzOtbnVXS7UButORHLVdr-ieMcyXZ8VRpSNcpMKuRExlRZVR4ScDoLbVOZXLqwgKzRgiZLZ-0M2joWkUrX5QP5EDZdimlkKj4viQ5_NO_4RjfVZVFXRtsCImNBN6h63K374j5TOCAFVpsdtKIofdDrwVBDJnjUy-60M5tXNM4j5m_LihwAWT1THqdqhY8eSdDsZEraZ1_RvZSWnSgYNSliEs5qmFNAf2iI7TKWMT90bBVFByX9wTdlhlOSfNL6e3mnAP7XU7signDgXDK8lr7Tu-M)
+
+![Diagrama de Casos de Uso](
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
@@ -211,19 +212,3 @@ aluno, acompanhar progresso, avaliar curso, gerenciar pagamentos, suporte técni
 a ser considerado é a relação entre Professor e Administrador, pois o próprio Professor pode ser o Administrador do
 sistema, ou seja, ele pode ter acesso a todas as funcionalidades do sistema, inclusive as de administrador. Logo há a
 necessidade de extender o caso de uso de Professor para Administrador.
-
----
-
-# Banner de apresentação
-
-## Título do trabalho:
-
-## Nome do autor:
-
-## Texto de apresentação
-
-## Solução
-
-## Elementos do Projeto
-
-## Considerações finais
