@@ -199,7 +199,7 @@ O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livr
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
 
-![Diagrama de Caso de Uso](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/Vitor-rs/AgePlan_backend_project/blob/master/docs/_backend_docs/diagramas/cd_pessoa-schema.iuml)
+![uc](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/use_case.iuml)
 
 
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
