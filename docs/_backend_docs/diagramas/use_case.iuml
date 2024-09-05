@@ -1,29 +1,43 @@
 @startuml
+left to right direction
 
+actor Professor
+actor Aluno
+actor Administrador
 
-actor "Professor" as professor
-actor "Aluno" as aluno
+rectangle "Sistema de Controle e Gerenciamento de Cursos Livres" {
 
-rectangle Sistema {
-    usecase "Cadastro de professores" as UC1
-    usecase "Cadastro de alunos" as UC2
-    usecase "Criação de cursos" as UC3
-    usecase "Administração de cursos" as UC4
-    usecase "Matrícula de alunos" as UC5
-    usecase "Acompanhamento de desempenho" as UC6
-    usecase "Gestão financeira" as UC7
-    usecase "Análise de cursos" as UC8
+    usecase "Cadastrar-se" as UC1
+    usecase "Login" as UC2
+    usecase "Criar Curso" as UC3
+    usecase "Administrar Curso" as UC4
+    usecase "Matricular-se no Curso" as UC5
+    usecase "Acompanhar Progresso" as UC6
+    usecase "Gerenciar Pagamentos" as UC7
+    usecase "Analisar Desempenho" as UC8
+    usecase "Avaliar Curso" as UC9
+    usecase "Suporte Técnico" as UC10
+    usecase "Gerenciar Sistema" as UC11
+
+    Professor --> UC1
+    Professor --> UC2
+    Professor --> UC3
+    Professor --> UC4
+    Professor --> UC7
+    Professor --> UC8
+    Professor --> UC10
+
+    Aluno --> UC1
+    Aluno --> UC2
+    Aluno --> UC5
+    Aluno --> UC6
+    Aluno --> UC9
+    Aluno --> UC10
+
+    Administrador --> UC2
+    Administrador --> UC7
+    Administrador --> UC11
+    Administrador --> UC10
 }
-
-professor -> UC1 : Realiza
-professor -> UC3 : Cria
-professor -> UC4 : Administra
-professor -> UC6 : Acompanha
-professor -> UC7 : Gerencia
-professor -> UC8 : Analisa
-
-aluno -> UC2 : Realiza
-aluno -> UC5 : Matricula
-aluno -> UC6 : Acompanha
 
 @enduml
