@@ -207,7 +207,53 @@ interações entre os usuários e o sistema, identificando as funcionalidades e 
 O diagrama de casos de uso ilustra as interações entre os usuários e o sistema, identificando as funcionalidades e os
 fluxos de trabalho do sistema. Os atores do sistema incluem professores, alunos e administradores, que interagem com o
 sistema por meio de casos de uso como cadastrar professor, cadastrar aluno, criar curso, administrar curso, matricular
-aluno, acompanhar progresso, avaliar curso, gerenciar pagamentos, suporte técnico, relatórios e configurações. Um ponto
+aluno, acompanhar progresso, gerenciar pagamentos, relatórios e configurações. Um ponto
 a ser considerado é a relação entre Professor e Administrador, pois o próprio Professor pode ser o Administrador do
 sistema, ou seja, ele pode ter acesso a todas as funcionalidades do sistema, inclusive as de administrador. Logo há a
 necessidade de extender o caso de uso de Professor para Administrador.
+
+
+
+Este diagrama de casos de uso representa as funcionalidades do **Sistema de Controle e Gerenciamento de Cursos Livres**. Ele aborda três tipos de usuários: **Administrador**, **Professor** e **Aluno**, destacando as interações de cada ator com as funcionalidades do sistema.
+
+#### Atores:
+- **Administrador**: Usuário com privilégios avançados que pode gerenciar o sistema, cadastrar outros professores, além de realizar todas as funções disponíveis para um professor.
+- **Professor**: Usuário responsável pela criação, gestão de cursos, acompanhamento de alunos e outras atividades relacionadas ao ensino.
+- **Aluno**: Usuário que acessa o sistema para acompanhar seu progresso nos cursos.
+
+#### Casos de Uso:
+
+Esta tabela apresenta os casos de uso identificados no diagrama, descrevendo as funcionalidades do sistema e as interações entre os atores.
+
+| Sigla | Caso de Uso                 | Descrição                                                                                               | Inclui     | Extende |
+|-------|-----------------------------|---------------------------------------------------------------------------------------------------------|------------|---------|
+| UC1   | Realizar cadastros diversos | Representa a capacidade do sistema de realizar cadastros, como o cadastro de professores e alunos.      | UC1a, UC1b | -       |
+| UC1a  | Cadastrar-se                | Permite o cadastro inicial de administradores e professores no sistema.                                 | -          | -       |
+| UC1b  | Cadastrar Aluno             | Permite o cadastro de novos alunos no sistema.                                                          | -          | -       |
+| UC2   | Login                       | Permite que todos os usuários façam login no sistema para acessar suas respectivas funcionalidades.     | -          | -       |
+| UC3   | Criar Curso                 | Permite ao professor criar novos cursos na plataforma.                                                  | -          | -       |
+| UC4   | Gerenciar Curso             | Representa as atividades de gestão de cursos realizadas pelo professor.                                 | UC4a, UC4b | -       |
+| UC4a  | Editar Curso                | Permite editar os detalhes de um curso existente.                                                       | -          | -       |
+| UC4b  | Remover Curso               | Permite a exclusão de um curso.                                                                         | -          | -       |
+| UC6   | Acompanhar Progresso        | Disponível para os alunos, permite que acompanhem seu progresso em cursos.                              | -          | -       |
+| UC7   | Gerenciar Pagamentos        | Permite ao professor gerenciar pagamentos de alunos relacionados aos cursos.                            | -          | -       |
+| UC8   | Analisar Desempenho         | Permite ao professor analisar o desempenho dos alunos em cursos.                                        | UC8a       | -       |
+| UC8a  | Análise por Aluno           | Análise detalhada do desempenho de um aluno específico.                                                 | -          | -       |
+| UC10  | Emitir Relatórios           | Permite ao professor emitir relatórios relacionados ao desempenho dos alunos e ao andamento dos cursos. | -          | -       |
+| UC11  | Gerenciar Sistema           | Permite ao administrador gerenciar as configurações do sistema.                                         | UC11a      | -       |
+| UC11a | Configurar Permissões       | Configurações de permissões para diferentes usuários.                                                   | -          | -       |
+| UC12  | Cadastrar Professor         | Permite ao administrador cadastrar novos professores no sistema.                                        | -          | -       |
+
+
+#### Relações entre Atores e Casos de Uso:
+
+- **Administrador**:
+    - Herda todas as funcionalidades do **Professor** (`<<extends>>`).
+    - Além das funções de professor, o administrador pode gerenciar o sistema (UC11), cadastrar outros professores (UC12) e realizar cadastros diversos (UC1).
+
+- **Professor**:
+    - Pode realizar o cadastro de alunos (UC1b), criar e gerenciar cursos (UC3 e UC4), acompanhar o progresso dos alunos (UC6), gerenciar pagamentos (UC7), analisar desempenho (UC8) e emitir relatórios (UC10).
+
+- **Aluno**:
+    - Pode realizar login (UC2) e acompanhar o progresso nos cursos (UC6).
+

@@ -1,5 +1,4 @@
 @startuml
-
 left to right direction
 
 actor Professor
@@ -48,5 +47,4 @@ rectangle "Sistema de Controle e Gerenciamento de Cursos Livres" {
 
     Administrador --|> Professor : <<extends>>
 }
-
 @enduml
