@@ -202,8 +202,6 @@ interações entre os usuários e o sistema, identificando as funcionalidades e 
 ![diagrama](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/use_case.iuml)
 
 
-![diagrama](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/cd_pessoa-schema.iuml)
-
 ### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
 
 O diagrama de casos de uso ilustra as interações entre os usuários e o sistema, identificando as funcionalidades e os

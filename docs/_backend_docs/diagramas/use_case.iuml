@@ -1,49 +1,29 @@
 @startuml
 
-left to right direction
-skinparam packageStyle rectangle
 
-actor Professor
-actor Aluno
-actor Administrador
+actor "Professor" as professor
+actor "Aluno" as aluno
 
-rectangle "Sistema de Controle e Gerenciamento de Cursos Livres" {
-  usecase "Cadastrar Professor" as UC1
-  usecase "Cadastrar Aluno" as UC2
-  usecase "Criar Curso" as UC3
-  usecase "Administrar Curso" as UC4
-  usecase "Matricular Aluno" as UC5
-  usecase "Acompanhar Progresso" as UC6
-  usecase "Avaliar Curso" as UC7
-  usecase "Gerenciar Pagamentos" as UC8
-  usecase "Suporte Técnico" as UC9
-  usecase "Relatórios" as UC10
-  usecase "Configurações" as UC11
+rectangle Sistema {
+    usecase "Cadastro de professores" as UC1
+    usecase "Cadastro de alunos" as UC2
+    usecase "Criação de cursos" as UC3
+    usecase "Administração de cursos" as UC4
+    usecase "Matrícula de alunos" as UC5
+    usecase "Acompanhamento de desempenho" as UC6
+    usecase "Gestão financeira" as UC7
+    usecase "Análise de cursos" as UC8
 }
 
-Professor --> UC1
-Professor --> UC3
-Professor --> UC4
-Professor --> UC6
-Professor --> UC8
+professor -> UC1 : Realiza
+professor -> UC3 : Cria
+professor -> UC4 : Administra
+professor -> UC6 : Acompanha
+professor -> UC7 : Gerencia
+professor -> UC8 : Analisa
 
-Aluno --> UC2
-Aluno --> UC5
-Aluno --> UC6
-Aluno --> UC7
-
-Administrador --> UC9
-Administrador --> UC10
-Administrador --> UC11
-Administrador --> UC1
-Administrador --> UC2
-Administrador --> UC3
-Administrador --> UC4
-Administrador --> UC5
-Administrador --> UC6
-Administrador --> UC7
-Administrador --> UC8
-
-Professor <|-- Administrador
+aluno -> UC2 : Realiza
+aluno -> UC5 : Matricula
+aluno -> UC6 : Acompanha
 
 @enduml
