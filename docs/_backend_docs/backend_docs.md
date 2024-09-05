@@ -202,7 +202,7 @@ interações entre os usuários e o sistema, identificando as funcionalidades e 
 ![diagrama](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/use_case.iuml)
 
 
-### 3.1.1 Diagrama de casos de uso ilustrando as interações entre os usuários e o sistema:
+### 3.1.1 Ilustrando as interações entre os usuários e o sistema:
 
 O diagrama de casos de uso ilustra as interações entre os usuários e o sistema, identificando as funcionalidades e os
 fluxos de trabalho do sistema. Os atores do sistema incluem professores, alunos e administradores, que interagem com o
@@ -211,10 +211,6 @@ aluno, acompanhar progresso, gerenciar pagamentos, relatórios e configurações
 a ser considerado é a relação entre Professor e Administrador, pois o próprio Professor pode ser o Administrador do
 sistema, ou seja, ele pode ter acesso a todas as funcionalidades do sistema, inclusive as de administrador. Logo há a
 necessidade de extender o caso de uso de Professor para Administrador.
-
-
-
-Este diagrama de casos de uso representa as funcionalidades do **Sistema de Controle e Gerenciamento de Cursos Livres**. Ele aborda três tipos de usuários: **Administrador**, **Professor** e **Aluno**, destacando as interações de cada ator com as funcionalidades do sistema.
 
 #### Atores:
 - **Administrador**: Usuário com privilégios avançados que pode gerenciar o sistema, cadastrar outros professores, além de realizar todas as funções disponíveis para um professor.
@@ -257,3 +253,34 @@ Esta tabela apresenta os casos de uso identificados no diagrama, descrevendo as 
 - **Aluno**:
     - Pode realizar login (UC2) e acompanhar o progresso nos cursos (UC6).
 
+### 3.1.2 Diagrama de Classes
+
+O diagrama de classes do sistema de controle e gerenciamento de cursos livres para freelancers representa a estrutura e
+os relacionamentos entre as classes do sistema, identificando as entidades e os atributos do sistema. O diagrama de
+classes inclui as seguintes classes:
+
+- **Professor**: Representa um professor que pode criar e gerenciar cursos.
+- **Aluno**: Representa um aluno que pode se matricular em cursos e acompanhar seu progresso.
+- **Curso**: Representa um curso criado por um professor, com detalhes como título, descrição e carga horária.
+- **Matrícula**: Representa a matrícula de um aluno em um curso, com informações como data de matrícula e status.
+- **Pagamento**: Representa um pagamento realizado por um aluno para se matricular em um curso, com informações como valor e data de pagamento.
+- **Relatório**: Representa um relatório gerado por um professor, com informações sobre o desempenho dos alunos e o andamento dos cursos.
+- **Configuração**: Representa as configurações do sistema, como permissões de acesso e configurações de segurança.
+- **Usuário**: Representa um usuário do sistema, com informações como nome, e-mail e senha.
+- **Privilégio**: Representa os privilégios de acesso de um usuário no sistema, como leitura, escrita e administração.
+- **Administrador**: Representa um administrador do sistema, com privilégios avançados para gerenciar o sistema.
+- **Role**: Representa o papel de um usuário no sistema, como professor, aluno ou administrador.
+- **Endereço**: Representa o endereço de um usuário, com informações como rua, número, bairro e cidade.
+- **Pessoa**: Classe abstrata da qual as classes Professor, Aluno e Administrador herdam.
+- **Contrato**: Representa um contrato entre um professor e um aluno para a realização de um curso.
+- **Avaliação**: Representa a avaliação de um aluno em um curso, com informações como nota e comentários.
+- **Aula**: Representa uma aula de um curso, com informações como data, horário e conteúdo.
+- **Presença**: Representa a presença de um aluno em uma aula, com informações como data e horário de entrada e saída.
+- **Método de Pagamento**: Representa um método de pagamento disponível para os alunos, como cartão de crédito, boleto ou transferência bancária.
+- **Desempenho**: Representa o desempenho de um aluno em um curso, com informações como notas, frequência e participação.
+- **Planejameto**: Representa o planejamento de um curso, com informações como ementa, objetivos e metodologia.
+- **Método-Avaliação**: Representa os métodos de avaliação de um curso, como provas, trabalhos e participação.
+
+O diagrama de classes ilustra as classes e os relacionamentos do sistema, identificando as entidades e os atributos do mesmo.
+
+![cd_geral](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/cd_geral.iuml)

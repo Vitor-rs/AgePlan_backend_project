@@ -1,0 +1,181 @@
+@startuml
+
+class Professor {
+    -id: int
+    -nome: string
+    -email: string
+    -senha: string
+    -telefone: string
+    -endereco: Endereco
+    -contratos: List<Contrato>
+    +criarCurso(): void
+    +editarCurso(): void
+    +removerCurso(): void
+    +gerarRelatorio(): void
+    +gerenciarPagamento(): void
+    +analisarDesempenho(): void
+}
+
+class Aluno {
+    -id: int
+    -nome: string
+    -email: string
+    -senha: string
+    -telefone: string
+    -endereco: Endereco
+    -contratos: List<Contrato>
+    +matricular(): void
+    +acompanharProgresso(): void
+}
+
+class Curso {
+    -id: int
+    -titulo: string
+    -descricao: string
+    -cargaHoraria: int
+    -aulas: List<Aula>
+    -metodoAvaliacao: MetodoAvaliacao
+    -planejamento: Planejamento
+    -contratos: List<Contrato>
+}
+
+class Matricula {
+    -id: int
+    -dataMatricula: Date
+    -status: string
+}
+
+class Pagamento {
+    -id: int
+    -valor: double
+    -dataPagamento: Date
+}
+
+class Relatorio {
+    -id: int
+    -dataGeracao: Date
+    -conteudo: string
+}
+
+class Configuracao {
+    -id: int
+    -permissao: string
+}
+
+class Usuario {
+    -id: int
+    -nome: string
+    -email: string
+    -senha: string
+}
+
+class Privilegio {
+    -id: int
+    -tipo: string
+}
+
+class Administrador {
+    -id: int
+    -nome: string
+    -email: string
+    -senha: string
+    -telefone: string
+    -endereco: Endereco
+    -contratos: List<Contrato>
+    +gerenciarSistema(): void
+}
+
+class Role {
+    -id: int
+    -nome: string
+}
+
+class Endereco {
+    -id: int
+    -rua: string
+    -numero: int
+    -bairro: string
+    -cidade: string
+}
+
+class Pessoa {
+    -id: int
+    -nome: string
+    -email: string
+    -senha: string
+    -telefone: string
+    -endereco: Endereco
+}
+
+class Contrato {
+    -id: int
+    -dataInicio: Date
+    -dataFim: Date
+    -status: string
+}
+
+class Avaliacao {
+    -id: int
+    -nota: double
+    -comentario: string
+}
+
+class Aula {
+    -id: int
+    -data: Date
+    -horario: Time
+    -conteudo: string
+}
+
+class Presenca {
+    -id: int
+    -data: Date
+    -horarioEntrada: Time
+    -horarioSaida: Time
+}
+
+class MetodoPagamento {
+    -id: int
+    -nome: string
+}
+
+class Desempenho {
+    -id: int
+    -nota: double
+    -frequencia: double
+    -participacao: double
+}
+
+class Planejamento {
+    -id: int
+    -ementa: string
+    -objetivos: string
+    -metodologia: string
+}
+
+class MetodoAvaliacao {
+    -id: int
+    -nome: string
+}
+
+Professor "1" -- "n" Curso
+Aluno "1" -- "n" Matricula
+Aluno "1" -- "n" Pagamento
+Professor "1" -- "n" Relatorio
+Administrador "1" -- "n" Configuracao
+Usuario "1" -- "n" Privilegio
+Administrador "1" -- "n" Role
+Pessoa "1" -- "n" Endereco
+Professor "1" -- "n" Contrato
+Aluno "1" -- "n" Contrato
+Avaliacao "1" -- "n" Contrato
+
+Contrato "1" -- "n" Curso
+Contrato "1" -- "n" Avaliacao
+Contrato "1" -- "n" Presenca
+Contrato "1" -- "n" Desempenho
+Contrato "1" -- "n" MetodoPagamento
+Contrato "1" -- "n" Planejamento
+Contrato "1" -- "n" MetodoAvaliacao
+
+@enduml
