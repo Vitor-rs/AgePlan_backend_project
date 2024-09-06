@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 
 /**
  * DTO para {@link Pessoa}
@@ -15,7 +18,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public abstract class PessoaDto {
+public abstract class PessoaDto implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    @NotEmpty
+    @NotNull
+    @NotBlank
+    @Column(nullable = false)
+    private Long id;
 
     private String nomeCompleto;
 

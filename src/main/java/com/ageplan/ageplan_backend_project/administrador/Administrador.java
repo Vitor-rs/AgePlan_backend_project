@@ -1,14 +1,18 @@
 package com.ageplan.ageplan_backend_project.administrador;
 
-import com.ageplan.ageplan_backend_project.pessoa.Pessoa;
+import com.ageplan.ageplan_backend_project.professor.Professor;
 import jakarta.persistence.Entity;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 
 
 @Entity
-
 @Getter
-public class Administrador extends Pessoa {
+@NoArgsConstructor
+public class Administrador extends Professor {
+
+    private String cargo;
 
     /*
       O administrador é uma pessoa que tem a role/função ROLE_ADMIN. Ele não terá atributos exclusivos,
@@ -40,6 +44,8 @@ public class Administrador extends Pessoa {
 //
 //        // Listar Instrutores
 //    }
+
+
 
 
 }

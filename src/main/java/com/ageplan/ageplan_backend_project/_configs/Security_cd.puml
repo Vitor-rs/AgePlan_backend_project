@@ -1,6 +1,6 @@
 @startuml
 
-abstract class Usuario <<@MappedSuperClass>> {
+class Usuario <<@Entity>> {
     - <u>SERIAL_VERSION_UUID</u>: Long = 1L
     ..
     - id: Long
@@ -32,38 +32,18 @@ abstract class Usuario <<@MappedSuperClass>> {
     + String toString()
 }
 
-abstract class Pessoa extends Usuario {
+abstract class Pessoa <<MappedSuperclass>> {
     - <u>SERIAL_VERSION_UUID</u>: Long = 1L
     ..
     - nomeCompleto: String
     - cpf: String
     - rg: String
-    - genero: char
+    - genero: String
     - dataNascimento: LocalDate
     - telefoneCelular: String
     - telefoneFixo: String
     - endereco: Endereco
     - estrangeiro: boolean
-    ..
-    + String getNomeCompleto()
-    + String getCpf()
-    + String getRg()
-    + char getGenero()
-    + LocalDate getDataNascimento()
-    + String getTelefoneCelular()
-    + String getTelefoneFixo()
-    + Endereco getEndereco()
-    + boolean isEstrangeiro()
-    ..
-    + void setNomeCompleto(String nomeCompleto)
-    + void setCpf(String cpf)
-    + void setRg(String rg)
-    + void setGenero(char genero)
-    + void setDataNascimento(LocalDate dataNascimento)
-    + void setTelefoneCelular(String telefoneCelular)
-    + void setTelefoneFixo(String telefoneFixo)
-    + void setEndereco(Endereco endereco)
-    + void setEstrangeiro(boolean estrangeiro)
     ..
     + boolean equals(Object o)
     + int hashCode()
@@ -75,12 +55,6 @@ class Roles {
     ..
     - id: Long
     - autoridade: String
-    ..
-    + String getAutoridade()
-    ..
-    + boolean equals(Object o)
-    + int hashCode()
-    + String toString()
 }
 
 class Administrador extends Pessoa {

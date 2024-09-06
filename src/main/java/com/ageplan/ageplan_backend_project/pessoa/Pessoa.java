@@ -24,6 +24,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 public abstract class Pessoa implements Serializable {
+
     @Serial
     private static final long serialVersionUID = 1L;
 
@@ -48,7 +49,7 @@ public abstract class Pessoa implements Serializable {
     /**
      * RG da pessoa.
      */
-    @NotEmpty
+
     @NotNull
     @NotBlank
     @Column(columnDefinition = "char(9)", unique = true, nullable = false)

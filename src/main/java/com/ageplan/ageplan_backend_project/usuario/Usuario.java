@@ -37,10 +37,6 @@ public abstract class Usuario implements Serializable {
     private Long id;
     /*----------------------------------------------------------------*/
 
-    /**
-     * -- SETTER --
-     * Sets nome usuario.
-     */
 
     @NotNull
     @NotBlank

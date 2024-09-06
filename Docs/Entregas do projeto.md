@@ -323,7 +323,10 @@ entre os atores e o sistema em um cenário específico, identificando as mensage
 
 ### 1.1 Lista de problemas a serem solucionados;
 
-Profissionais independentes e freelancers de diversas áreas que buscam renda extra enfrentam dificuldades para criar, administrar e ministrar seus próprios cursos, devido à falta de ferramentas acessíveis e recursos adequados para gerenciar suas atividades educacionais sem dependencia planilhas, sistemas de terceiros ou de grandes empresas e também eficientizar seu gerenciamento de recursos e finanças.
+Profissionais independentes e freelancers de diversas áreas que buscam renda extra enfrentam dificuldades para criar,
+administrar e ministrar seus próprios cursos, devido à falta de ferramentas acessíveis e recursos adequados para
+gerenciar suas atividades educacionais sem dependencia planilhas, sistemas de terceiros ou de grandes empresas e também
+eficientizar seu gerenciamento de recursos e finanças.
 
 1. Dificuldade em criar e administrar cursos de forma personalizada e simplificada.
 2. Dificuldade em gerenciar matrículas, frequências, pagamentos e progresso dos alunos.
@@ -332,19 +335,17 @@ Profissionais independentes e freelancers de diversas áreas que buscam renda ex
 
 ### 1.2 Descrição detalhada do problema a ser solucionado
 
-
-
-
-
-
-
 ### 1.3 Lista de requisitos funcionais e não funcionais a serem desenvolvidos na solução do problema
-### 1.4 Diagramas de casos de uso simplificado e expandido
-### 1.5 Especificação dos casos de uso
-### 1.6 Especificação dos casos de uso
-### 1.7 Diagrama de navegação de páginas web das principais funcionalidades
-### 1.8 Protótipo web das funcionalidades
 
+### 1.4 Diagramas de casos de uso simplificado e expandido
+
+### 1.5 Especificação dos casos de uso
+
+### 1.6 Especificação dos casos de uso
+
+### 1.7 Diagrama de navegação de páginas web das principais funcionalidades
+
+### 1.8 Protótipo web das funcionalidades
 
 ## Etapa 2
 
