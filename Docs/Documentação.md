@@ -198,9 +198,7 @@ funcionalidades e dos componentes do sistema, por meio de diagramas de casos de 
 O diagrama de casos de uso do sistema de controle e gerenciamento de cursos livres para freelancers representa as
 interações entre os usuários e o sistema, identificando as funcionalidades e os fluxos de trabalho do sistema.
 
-
 ![diagrama](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Vitor-rs/AgePlan_backend_project/master/docs/_backend_docs/diagramas/use_case.iuml)
-
 
 ### 3.1.1 Ilustrando as interações entre os usuários e o sistema:
 
@@ -213,13 +211,17 @@ sistema, ou seja, ele pode ter acesso a todas as funcionalidades do sistema, inc
 necessidade de extender o caso de uso de Professor para Administrador.
 
 #### Atores:
-- **Administrador**: Usuário com privilégios avançados que pode gerenciar o sistema, cadastrar outros professores, além de realizar todas as funções disponíveis para um professor.
-- **Professor**: Usuário responsável pela criação, gestão de cursos, acompanhamento de alunos e outras atividades relacionadas ao ensino.
+
+- **Administrador**: Usuário com privilégios avançados que pode gerenciar o sistema, cadastrar outros professores, além
+  de realizar todas as funções disponíveis para um professor.
+- **Professor**: Usuário responsável pela criação, gestão de cursos, acompanhamento de alunos e outras atividades
+  relacionadas ao ensino.
 - **Aluno**: Usuário que acessa o sistema para acompanhar seu progresso nos cursos.
 
 #### Casos de Uso:
 
-Esta tabela apresenta os casos de uso identificados no diagrama, descrevendo as funcionalidades do sistema e as interações entre os atores.
+Esta tabela apresenta os casos de uso identificados no diagrama, descrevendo as funcionalidades do sistema e as
+interações entre os atores.
 
 | Sigla | Caso de Uso                 | Descrição                                                                                               | Inclui     | Extende |
 |-------|-----------------------------|---------------------------------------------------------------------------------------------------------|------------|---------|
@@ -240,15 +242,16 @@ Esta tabela apresenta os casos de uso identificados no diagrama, descrevendo as 
 | UC11a | Configurar Permissões       | Configurações de permissões para diferentes usuários.                                                   | -          | -       |
 | UC12  | Cadastrar Professor         | Permite ao administrador cadastrar novos professores no sistema.                                        | -          | -       |
 
-
 #### Relações entre Atores e Casos de Uso:
 
 - **Administrador**:
     - Herda todas as funcionalidades do **Professor** (`<<extends>>`).
-    - Além das funções de professor, o administrador pode gerenciar o sistema (UC11), cadastrar outros professores (UC12) e realizar cadastros diversos (UC1).
+    - Além das funções de professor, o administrador pode gerenciar o sistema (UC11), cadastrar outros professores (
+      UC12) e realizar cadastros diversos (UC1).
 
 - **Professor**:
-    - Pode realizar o cadastro de alunos (UC1b), criar e gerenciar cursos (UC3 e UC4), acompanhar o progresso dos alunos (UC6), gerenciar pagamentos (UC7), analisar desempenho (UC8) e emitir relatórios (UC10).
+    - Pode realizar o cadastro de alunos (UC1b), criar e gerenciar cursos (UC3 e UC4), acompanhar o progresso dos
+      alunos (UC6), gerenciar pagamentos (UC7), analisar desempenho (UC8) e emitir relatórios (UC10).
 
 - **Aluno**:
     - Pode realizar login (UC2) e acompanhar o progresso nos cursos (UC6).
@@ -262,7 +265,8 @@ os relacionamentos entre as classes do sistema, identificando as entidades e os 
 
 #### Descrição das Classes (Tabela):
 
-Esta tabela apresenta as classes identificadas no diagrama de classes, descrevendo as entidades e os atributos do sistema.
+Esta tabela apresenta as classes identificadas no diagrama de classes, descrevendo as entidades e os atributos do
+sistema.
 
 | Classe              | Descrição                                                                                                              |
 |---------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -290,14 +294,25 @@ Esta tabela apresenta as classes identificadas no diagrama de classes, descreven
 
 #### Pontos a serem considerados:
 
-- **Herança**: A classe `Pessoa` é uma classe abstrata da qual as classes `Professor`, `Aluno` e `Administrador` herdam, representando a relação de herança entre as entidades. Isso se de ao fato de que todos os usuários do sistema possuem atributos em comum, como nome, CPF, RG, data de nascimento, endereço e entre outros, que são representadas pela classe `Pessoa`. Logo **Pessoa** não será instanciada, mas sim suas subclasses.
-- **Associação**: A classe `Curso` possui uma associação com a classe `Professor`, indicando que um curso é criado por um Professor ou um Administrador. A classe `Matrícula` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno é matriculado em um curso por um Professor. A classe `Pagamento` possui associações com as classes `Aluno` e `Curso`, indicando que um aluno realiza um pagamento para se matricular em um curso.
-- **Agregação**: A classe `Relatório` possui uma agregação com a classe `Curso`, indicando que um relatório é gerado a partir de um curso. A classe `Configuração` possui uma agregação com a classe `Privilégio`, indicando que as configurações do sistema incluem permissões de acesso.
-- **Composição**: A classe `Endereço` possui uma composição com a classe `Pessoa`, indicando que um endereço é parte de uma pessoa. A classe `Contrato` possui uma composição com as classes `Professor` e `Aluno`, indicando que um contrato é estabelecido entre um professor e um aluno para a realização de um curso.
+- **Herança**: A classe `Pessoa` é uma classe abstrata da qual as classes `Professor`, `Aluno` e `Administrador` herdam,
+  representando a relação de herança entre as entidades. Isso se de ao fato de que todos os usuários do sistema possuem
+  atributos em comum, como nome, CPF, RG, data de nascimento, endereço e entre outros, que são representadas pela classe
+  `Pessoa`. Logo **Pessoa** não será instanciada, mas sim suas subclasses.
+- **Associação**: A classe `Curso` possui uma associação com a classe `Professor`, indicando que um curso é criado por
+  um Professor ou um Administrador. A classe `Matrícula` possui associações com as classes `Aluno` e `Curso`, indicando
+  que um aluno é matriculado em um curso por um Professor. A classe `Pagamento` possui associações com as classes
+  `Aluno` e `Curso`, indicando que um aluno realiza um pagamento para se matricular em um curso.
+- **Agregação**: A classe `Relatório` possui uma agregação com a classe `Curso`, indicando que um relatório é gerado a
+  partir de um curso. A classe `Configuração` possui uma agregação com a classe `Privilégio`, indicando que as
+  configurações do sistema incluem permissões de acesso.
+- **Composição**: A classe `Endereço` possui uma composição com a classe `Pessoa`, indicando que um endereço é parte de
+  uma pessoa. A classe `Contrato` possui uma composição com as classes `Professor` e `Aluno`, indicando que um contrato
+  é estabelecido entre um professor e um aluno para a realização de um curso.
 
 ### 3.1.3 Diagrama de Sequência
 
-O diagrama de sequência do sistema de controle e gerenciamento de cursos livres para freelancers representa a interação entre os atores e o sistema em um cenário específico, identificando as mensagens trocadas e as etapas do processo.
+O diagrama de sequência do sistema de controle e gerenciamento de cursos livres para freelancers representa a interação
+entre os atores e o sistema em um cenário específico, identificando as mensagens trocadas e as etapas do processo.
 
 
 

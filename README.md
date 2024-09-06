@@ -1,9 +1,12 @@
 # AgePlan Project
+
 ## Gerenciamento de cursos livres para freelancers ou profissionais autônomos
 
 ## Visão Geral
 
-Este projeto visa desenvolver um sistema independente de controle e gerenciamento de cursos livres para profissionais freelancers e autônomos. A plataforma permite que instrutores criem, administrem e ministrem cursos personalizados de forma simplificada, atendendo à crescente demanda por oportunidades de ensino e aprendizado.
+Este projeto visa desenvolver um sistema independente de controle e gerenciamento de cursos livres para profissionais
+freelancers e autônomos. A plataforma permite que instrutores criem, administrem e ministrem cursos personalizados de
+forma simplificada, atendendo à crescente demanda por oportunidades de ensino e aprendizado.
 
 ## Características Principais
 

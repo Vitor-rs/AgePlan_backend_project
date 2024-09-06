@@ -15,6 +15,4 @@ public class UsuarioSettings implements Serializable {
     private Long id;
 
 
-
-
 }
