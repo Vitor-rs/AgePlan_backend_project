@@ -1,0 +1,23 @@
+### Diagrama de Sequência
+
+Este diagrama de sequência tem como objetivo mostrar a interação entre os atores do sistema, sendo eles: Administrador, Professor e Aluno.
+
+###
+
+@startuml
+
+actor Administrador
+actor Professor
+actor Aluno
+
+Administrador -> Professor: Cadastrar Professor
+Professor -> Professor: Criar Curso
+Professor -> Aluno: Matricular Aluno
+Aluno -> Professor: Acompanhar Progresso
+Professor -> Professor: Gerenciar Curso
+Professor -> Professor: Gerenciar Pagamentos
+Professor -> Professor: Analisar Desempenho
+Professor -> Professor: Emitir Relatórios
+Administrador -> Administrador: Gerenciar Sistema
+
+@enduml

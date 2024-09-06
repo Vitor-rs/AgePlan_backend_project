@@ -1,0 +1,25 @@
+### Diagrama de Sequência
+
+Este diagrama de sequência tem como objetivo mostrar a interação que se dá entre o administrador e o sistema.
+
+###
+
+@startuml
+
+actor Administrador
+participant "Sistema" as Sistema
+
+Administrador -> Sistema: Acessa o sistema
+Sistema -> Administrador: Exibe a tela de login
+Administrador -> Sistema: Insere o login e senha
+Sistema -> Administrador: Exibe a tela inicial
+Administrador -> Sistema: Clica em "Cadastrar"
+Sistema -> Administrador: Exibe a tela de cadastro
+Administrador -> Sistema: Insere os dados do novo usuário
+Sistema -> Administrador: Exibe a tela de confirmação
+Administrador -> Sistema: Clica em "Confirmar"
+Sistema -> Administrador: Exibe a tela de sucesso
+Administrador -> Sistema: Clica em "Sair"
+Sistema -> Administrador: Exibe a tela de login
+
+@enduml

@@ -1,0 +1,26 @@
+## Diagrama de Classe
+
+Este diagrama representa o ator/classe Administrador, que é responsável por gerenciar o sistema, cadastrar professores e realizar outras funções avançadas. O Administrador possui um relacionamento de associação com a classe Professor, indicando que pode cadastrar professores no sistema. O Administrador também possui um relacionamento de agregação com a classe Configuração, indicando que pode configurar as permissões de acesso no sistema.
+
+###
+
+@startuml
+
+class Administrador {
+    + cadastrarProfessor()
+    + gerenciarSistema()
+}
+
+class Professor {
+    + criarCurso()
+    + gerenciarCurso()
+}
+
+class Configuracao {
+    + configurarPermissoes()
+}
+
+Administrador --> Professor
+Administrador --> Configuracao
+
+@enduml

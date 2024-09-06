@@ -1,0 +1,25 @@
+### Diagrama de Caso de Uso de Administrador
+
+Este diagrama de caso de uso tem como objetivo mostrar as interações entre o administrador e o sistema.
+
+###
+
+@startuml
+
+left to right direction
+
+actor Administrador
+
+usecase "Acessar o sistema"
+usecase "Gerenciar Professor"
+usecase "Gerenciar curso"
+usecase "Gerar relatório"
+usecase "Configurar sistema"
+
+Administrador --> "Acessar o sistema"
+Administrador --> "Gerenciar Professor"
+Administrador --> "Gerenciar curso"
+Administrador --> "Gerar relatório"
+Administrador --> "Configurar sistema"
+
+@enduml
