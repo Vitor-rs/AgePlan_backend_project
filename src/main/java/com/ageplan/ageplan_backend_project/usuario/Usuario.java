@@ -29,7 +29,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-public abstract class Usuario implements Serializable {
+public class Usuario implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
