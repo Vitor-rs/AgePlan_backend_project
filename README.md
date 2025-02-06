@@ -31,24 +31,7 @@ forma simplificada, atendendo à crescente demanda por oportunidades de ensino e
 - [Spring Framework](https://spring.io/)
 - [Java](https://www.java.com/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [Llama 3.1 AI](https://llama.meta.com/)
 
-## Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/Vitor-rs/AgePlan_backend_project.git
-
-# Entre no diretório do projeto
-cd AgePlan_backend_project
-
-# Instale as dependências
-mvn install
-
-# Inicie o servidor de desenvolvimento
-mvn spring-boot:run
-
-```
 
 ## Documentação e manuais
 
